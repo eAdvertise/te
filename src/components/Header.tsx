@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28">
           <a href="#home" className="flex items-center gap-2">
-            <img alt="Mediterranean Estates Logo" className="h-20 w-auto" src="/lovable-uploads/6c84daf9-e9de-4121-b73c-0695989d1530.jpg" />
+            <img alt="Mediterranean Estates Logo" className="h-20 w-auto" src="/lovable-uploads/e077da15-530d-44ca-826c-f18de54bb951.png" />
           </a>
 
           {/* Desktop Navigation */}
