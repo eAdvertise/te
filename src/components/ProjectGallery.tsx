@@ -44,7 +44,7 @@ const ProjectGallery = () => {
       images: [project2, interiorKitchen, interiorBedroom, interiorLiving],
       title: "Timi Village House Rennovation",
       location: "Timi Village, Pafos, Cyprus",
-      description: "Traditional Andalusian villa nestled in the hills above Puerto Banús. Stone archways, mature gardens with century-old palms, and views to La Concha mountain.",
+      description: "Village house that needed major renovation. Exterior structure problems and upgrade needed.",
       specs: "385m² | 4 Bed | 3 Bath | Garden",
     },
     {
