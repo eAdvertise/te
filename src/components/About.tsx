@@ -17,8 +17,7 @@ const About = () => {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               From sun-drenched villas overlooking the azure sea to charming townhouses 
               and modern apartments, we create homes that capture the essence of Mediterranean 
-              living. Every project reflects our commitment to quality, sustainability, 
-              respect to sustainability and timeless design.
+              living. Every project reflects our commitment to quality, sustainability and timeless design.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
