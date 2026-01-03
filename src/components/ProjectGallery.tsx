@@ -14,7 +14,7 @@ const ProjectGallery = () => {
   const projects = [
     {
       image: project1,
-      title: "Villa Azure",
+      title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
       description: "A stunning infinity pool villa with panoramic Mediterranean views, featuring 5 bedrooms and contemporary open-plan living.",
       specs: "450m² | 5 Bed | 4 Bath | Pool",
