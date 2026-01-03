@@ -23,21 +23,13 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28">
-          {/* Desktop Navigation - Left */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.slice(0, 3).map(link => <a key={link.name} href={link.href} className="text-foreground/80 hover:text-primary transition-colors font-medium">
-                {link.name}
-              </a>)}
-          </nav>
-
-          {/* Centered Logo */}
-          <a href="#home" className="flex items-center gap-2 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-            <img alt="Mediterranean Estates Logo" className="h-24 w-auto" src="/lovable-uploads/6c84daf9-e9de-4121-b73c-0695989d1530.jpg" />
+          <a href="#home" className="flex items-center gap-2">
+            <img alt="Mediterranean Estates Logo" className="h-20 w-auto" src="/lovable-uploads/6c84daf9-e9de-4121-b73c-0695989d1530.jpg" />
           </a>
 
-          {/* Desktop Navigation - Right */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.slice(3).map(link => <a key={link.name} href={link.href} className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            {navLinks.map(link => <a key={link.name} href={link.href} className="text-foreground/80 hover:text-primary transition-colors font-medium">
                 {link.name}
               </a>)}
           </nav>
