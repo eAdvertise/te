@@ -43,7 +43,7 @@ const ProjectGallery = () => {
     {
       images: [project3, interiorLiving, interiorKitchen, interiorBedroom],
       title: "Timi Village House Renovation",
-      location: "Cortona, Tuscany, Italy",
+      location: "Timi Village, Pafos, Cyprus",
       description: "Restored 18th-century townhouse in the historic centro storico. Original terracotta floors, vaulted ceilings, and a private courtyard with a Renaissance fountain.",
       specs: "320m² | 4 Bed | 3 Bath | Courtyard",
     },
