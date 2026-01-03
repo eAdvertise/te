@@ -42,7 +42,7 @@ const ProjectGallery = () => {
     },
     {
       images: [project2, interiorKitchen, interiorBedroom, interiorLiving],
-      title: "Timi Village House Rennovation",
+      title: "Timi Village House Renovation",
       location: "Timi Village, Pafos, Cyprus",
       description: "Village house that needed major renovation. Exterior structure problems and upgrade needed.",
       specs: "385m² | 4 Bed | 3 Bath | Garden",
