@@ -60,7 +60,7 @@ const ProjectGallery = () => {
       title: "Shop Renovation",
       location: "Pafos, Cyprus",
       description: "Structural issues shop that needed Civil Engineer involvement and special material use.",
-      specs: "545m² | 6 Bed | 5 Bath | Beachfront",
+      specs: "75m²",
     },
     {
       images: [project5, interiorLiving, interiorBedroom, interiorKitchen],
