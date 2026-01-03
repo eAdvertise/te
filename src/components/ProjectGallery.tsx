@@ -14,15 +14,6 @@ import interiorLiving from "@/assets/interior-living.jpg";
 import interiorBedroom from "@/assets/interior-bedroom.jpg";
 import interiorPool from "@/assets/interior-pool.jpg";
 import interiorKitchen from "@/assets/interior-kitchen.jpg";
-import timi1 from "@/assets/timi-1.jpg";
-import timi2 from "@/assets/timi-2.jpg";
-import timi3 from "@/assets/timi-3.jpg";
-import timi4 from "@/assets/timi-4.jpg";
-import timi5 from "@/assets/timi-5.jpg";
-import timi6 from "@/assets/timi-6.jpg";
-import timi7 from "@/assets/timi-7.jpg";
-import timi8 from "@/assets/timi-8.jpg";
-import timi9 from "@/assets/timi-9.jpg";
 import stefonmariaExterior from "@/assets/stefonmaria-exterior.jpg";
 import stefonmariaLiving from "@/assets/stefonmaria-living.jpg";
 import stefonmariaEntrance from "@/assets/stefonmaria-entrance.jpg";
@@ -48,13 +39,6 @@ const ProjectGallery = () => {
       location: "Kissonerga, Pafos, Cyprus",
       description: "Tailored made Villa with a pool, jacuzzi, under floor heating, pool water fall, fountain and many other facilities.",
       specs: "100m² | 2 Bed | 2 Bath | Pool",
-    },
-    {
-      images: [timi2, timi1, timi3, timi4, timi5, timi6, timi7, timi8, timi9],
-      title: "Timi Village House Renovation",
-      location: "Timi Village, Pafos, Cyprus",
-      description: "Village house that needed major renovation. Exterior structure problems and upgrade needed.",
-      specs: "100m² | 4 Bed | 3 Bath | Garden",
     },
     {
       images: [project3, interiorLiving, interiorKitchen, interiorBedroom],
