@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Award, Users } from "lucide-react";
 import heroImage from "@/assets/hero-villa.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Luxury Mediterranean Villa"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Luxury Mediterranean Villa" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
       </div>
 
@@ -26,11 +20,7 @@ const Hero = () => {
             Crafting Dream Homes on the Mediterranean Coast
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-            With over 25 years of excellence, we transform visions into stunning 
-            Mediterranean properties. From luxury villas to coastal retreats, 
-            we build with passion and precision.
-          </p>
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">Aim for excellence, we transform visions into stunning Mediterranean properties. From luxury villas to coastal retreats, we build with passion and precision.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" className="group">
@@ -49,7 +39,7 @@ const Hero = () => {
                 <Building2 className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary-foreground">150+</div>
+                <div className="text-2xl font-bold text-primary-foreground">40+</div>
                 <div className="text-sm text-primary-foreground/70">Projects</div>
               </div>
             </div>
@@ -74,8 +64,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
