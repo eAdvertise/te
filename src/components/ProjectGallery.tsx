@@ -22,11 +22,6 @@ import stefonmariaJacuzzi from "@/assets/stefonmaria-jacuzzi.jpg";
 import stefonmariaBalcony from "@/assets/stefonmaria-balcony.jpg";
 import stefonmariaTerrace from "@/assets/stefonmaria-terrace.jpg";
 import stefonmariaDining from "@/assets/stefonmaria-dining.jpg";
-import project2Exterior from "@/assets/project2-exterior.jpg";
-import project2Terrace from "@/assets/project2-terrace.jpg";
-import project2Side from "@/assets/project2-side.jpg";
-import project2Pool from "@/assets/project2-pool.jpg";
-import project2Arches from "@/assets/project2-arches.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -41,11 +36,11 @@ const ProjectGallery = () => {
       specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
-      images: [project2Exterior, project2Terrace, project2Side, project2Pool, project2Arches],
-      title: "Villa Under Construction",
-      location: "Kissonerga, Pafos, Cyprus",
-      description: "Mediterranean villa currently under construction featuring traditional arched architecture, pool area with planters, and spacious terrace areas.",
-      specs: "In Progress | Pool | Terrace",
+      images: [project2, interiorKitchen, interiorBedroom, interiorLiving],
+      title: "Casa Montaña",
+      location: "Nueva Andalucía, Marbella, Spain",
+      description: "Traditional Andalusian villa nestled in the hills above Puerto Banús. Stone archways, mature gardens with century-old palms, and views to La Concha mountain.",
+      specs: "385m² | 4 Bed | 3 Bath | Garden",
     },
     {
       images: [project3, interiorLiving, interiorKitchen, interiorBedroom],
