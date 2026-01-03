@@ -40,7 +40,6 @@ import shopRenovation2 from "@/assets/shop-renovation-2.jpg";
 import shopRenovation3 from "@/assets/shop-renovation-3.jpg";
 import shopRenovation4 from "@/assets/shop-renovation-4.jpg";
 import shopRenovation5 from "@/assets/shop-renovation-5.jpg";
-import shopRenovation6 from "@/assets/shop-renovation-6.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -57,7 +56,7 @@ const ProjectGallery = () => {
     description: "An older house that needed external attention and some structural reinforcement.",
     specs: "90m² | 3 Bed | 1 Bath | Courtyard"
   }, {
-    images: [shopRenovation1, shopRenovation2, shopRenovation3, shopRenovation4, shopRenovation5, shopRenovation6],
+    images: [shopRenovation1, shopRenovation2, shopRenovation3, shopRenovation4, shopRenovation5],
     title: "Shop Renovation",
     location: "Pafos, Cyprus",
     description: "Structural issues shop that needed Civil Engineer involvement and special material use.",
