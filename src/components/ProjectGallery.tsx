@@ -9,7 +9,7 @@ import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
-import project9 from "@/assets/project-9.jpg";
+
 import interiorLiving from "@/assets/interior-living.jpg";
 import interiorBedroom from "@/assets/interior-bedroom.jpg";
 import interiorPool from "@/assets/interior-pool.jpg";
@@ -86,12 +86,6 @@ const ProjectGallery = () => {
     location: "Oia, Santorini, Greece",
     description: "Iconic caldera-view property carved into the volcanic cliff. Minimalist Cycladic design, private infinity pool, and front-row seats to the famous Oia sunset.",
     specs: "340m² | 4 Bed | 3 Bath | Caldera View"
-  }, {
-    images: [project9, interiorKitchen, interiorLiving, interiorBedroom],
-    title: "Podere San Lorenzo",
-    location: "Montalcino, Tuscany, Italy",
-    description: "Elegant stone farmhouse in the heart of Brunello wine country. Barrel-vaulted dining room, alfresco terrace, and 2 hectares of private vineyards.",
-    specs: "510m² | 6 Bed | 5 Bath | Vineyard"
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
