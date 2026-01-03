@@ -57,7 +57,7 @@ const ProjectGallery = () => {
     },
     {
       images: [project4, interiorPool, interiorBedroom, interiorLiving],
-      title: "Quinta do Mar",
+      title: "Shop Renovation",
       location: "Carvoeiro, Algarve, Portugal",
       description: "Clifftop estate with direct access to secluded cove beach. Multiple sun terraces, outdoor kitchen, and panoramic Atlantic views from every room.",
       specs: "545m² | 6 Bed | 5 Bath | Beachfront",
