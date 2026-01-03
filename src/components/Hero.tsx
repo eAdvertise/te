@@ -16,11 +16,9 @@ const Hero = () => {
             Premium Mediterranean Construction
           </span>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground mb-6 leading-tight">
-            Mediterranean Estates
-          </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">A premier property construction and development company specializing in renovation of or brand new homes. Our team of architects, engineers, and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.</p>
+          
+          <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed md:text-sm">A premier property construction and development company specializing in renovation of or brand new homes. Our team of architects, engineers, and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" className="group">
