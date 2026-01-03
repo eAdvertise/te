@@ -19,6 +19,9 @@ import stefonmariaLiving from "@/assets/stefonmaria-living.jpg";
 import stefonmariaEntrance from "@/assets/stefonmaria-entrance.jpg";
 import stefonmariaPool from "@/assets/stefonmaria-pool.jpg";
 import stefonmariaJacuzzi from "@/assets/stefonmaria-jacuzzi.jpg";
+import stefonmariaBalcony from "@/assets/stefonmaria-balcony.jpg";
+import stefonmariaTerrace from "@/assets/stefonmaria-terrace.jpg";
+import stefonmariaDining from "@/assets/stefonmaria-dining.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -26,7 +29,7 @@ const ProjectGallery = () => {
 
   const projects = [
     {
-      images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi],
+      images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining],
       title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
       description: "Contemporary hillside residence with heated infinity pool overlooking the Mediterranean Sea. Features open-plan living with floor-to-ceiling windows and a private olive garden.",
