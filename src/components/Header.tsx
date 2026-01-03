@@ -25,6 +25,7 @@ const Header = () => {
           <a href="#home" className="flex items-center gap-3">
             
             <span className="text-2xl font-serif font-bold text-primary">
+
 tE.properties</span>
           </a>
 
