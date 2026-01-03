@@ -43,7 +43,7 @@ const ProjectGallery = () => {
     {
       images: [project2, interiorKitchen, interiorBedroom, interiorLiving],
       title: "Timi Village House Rennovation",
-      location: "Nueva Andalucía, Marbella, Spain",
+      location: "Timi Village, Pafos, Cyprus",
       description: "Traditional Andalusian villa nestled in the hills above Puerto Banús. Stone archways, mature gardens with century-old palms, and views to La Concha mountain.",
       specs: "385m² | 4 Bed | 3 Bath | Garden",
     },
