@@ -10,16 +10,15 @@ const About = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-6">Building Mediterranean Excellence </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Mediterranean Estates is a premier property construction and development 
-              company specializing in luxury coastal homes. Our team of architects, 
-              engineers, and craftsmen bring together traditional Mediterranean aesthetics 
-              with modern innovation.
+              tE is a premier property construction and development company specializing 
+              renovation of homes or building brand new. Our team of architects, engineers, 
+              and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               From sun-drenched villas overlooking the azure sea to charming townhouses 
-              nestled in historic villages, we create homes that capture the essence of 
-              Mediterranean living. Every project reflects our commitment to quality, 
-              sustainability, and timeless design.
+              and modern apartments, we create homes that capture the essence of Mediterranean 
+              living. Every project reflects our commitment to quality, sustainability, 
+              respect to sustainability and timeless design.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
