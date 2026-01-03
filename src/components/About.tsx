@@ -36,19 +36,16 @@ const About = () => {
                   <div className="text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="bg-secondary/10 rounded-2xl p-8 text-center">
-                  <div className="text-5xl font-bold text-secondary mb-2">150+</div>
+                  <div className="text-5xl font-bold text-secondary mb-2">40+</div>
                   <div className="text-muted-foreground">Projects Completed</div>
                 </div>
               </div>
               <div className="space-y-4 mt-8">
                 <div className="bg-secondary/10 rounded-2xl p-8 text-center">
-                  <div className="text-5xl font-bold text-secondary mb-2">50+</div>
+                  <div className="text-5xl font-bold text-secondary mb-2">22+</div>
                   <div className="text-muted-foreground">Expert Team</div>
                 </div>
-                <div className="bg-primary/10 rounded-2xl p-8 text-center">
-                  <div className="text-5xl font-bold text-primary mb-2">12</div>
-                  <div className="text-muted-foreground">Industry Awards</div>
-                </div>
+                
               </div>
             </div>
           </div>
