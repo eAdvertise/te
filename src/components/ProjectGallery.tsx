@@ -32,7 +32,7 @@ const ProjectGallery = () => {
       images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining],
       title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
-      description: "Contemporary hillside residence with heated infinity pool overlooking the Mediterranean Sea. Features open-plan living with floor-to-ceiling windows and a private olive garden.",
+      description: "Tailored made Villa with a pool, jacuzzi, under floor heating, pool water fall, fountain and many other facilities.",
       specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
