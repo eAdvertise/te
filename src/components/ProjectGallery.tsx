@@ -20,6 +20,9 @@ import timi3 from "@/assets/timi-3.jpg";
 import timi4 from "@/assets/timi-4.jpg";
 import timi5 from "@/assets/timi-5.jpg";
 import timi6 from "@/assets/timi-6.jpg";
+import timi7 from "@/assets/timi-7.jpg";
+import timi8 from "@/assets/timi-8.jpg";
+import timi9 from "@/assets/timi-9.jpg";
 import stefonmariaExterior from "@/assets/stefonmaria-exterior.jpg";
 import stefonmariaLiving from "@/assets/stefonmaria-living.jpg";
 import stefonmariaEntrance from "@/assets/stefonmaria-entrance.jpg";
@@ -47,7 +50,7 @@ const ProjectGallery = () => {
       specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
-      images: [timi2, timi1, timi3, timi4, timi5, timi6],
+      images: [timi2, timi1, timi3, timi4, timi5, timi6, timi7, timi8, timi9],
       title: "Timi Village House Renovation",
       location: "Timi Village, Pafos, Cyprus",
       description: "Village house that needed major renovation. Exterior structure problems and upgrade needed.",
