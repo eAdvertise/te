@@ -31,6 +31,7 @@ import timi1 from "@/assets/timi-1.jpg";
 import timi2 from "@/assets/timi-2.jpg";
 import timi3 from "@/assets/timi-3.jpg";
 import timi4 from "@/assets/timi-4.jpg";
+import timi5 from "@/assets/timi-5.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -45,7 +46,7 @@ const ProjectGallery = () => {
       specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
-      images: [timi1, timi2, timi3, timi4],
+      images: [timi1, timi2, timi3, timi4, timi5],
       title: "Timi Village House Renovation",
       location: "Timi Village, Pafos, Cyprus",
       description: "An older house that needed external attention and some structural reinforcement.",
