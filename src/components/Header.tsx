@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
@@ -22,11 +23,8 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" className="flex items-center gap-3">
-            
-            <span className="text-2xl font-serif font-bold text-primary">
-
-tE.properties</span>
+          <a href="#home" className="flex items-center gap-2">
+            <img src={logo} alt="Mediterranean Estates Logo" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
