@@ -10,69 +10,74 @@ import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
 import project9 from "@/assets/project-9.jpg";
+import interiorLiving from "@/assets/interior-living.jpg";
+import interiorBedroom from "@/assets/interior-bedroom.jpg";
+import interiorPool from "@/assets/interior-pool.jpg";
+import interiorKitchen from "@/assets/interior-kitchen.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const projects = [
     {
-      image: project1,
+      images: [project1, interiorLiving, interiorBedroom, interiorPool],
       title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
       description: "Contemporary hillside residence with heated infinity pool overlooking the Mediterranean Sea. Features open-plan living with floor-to-ceiling windows and a private olive garden.",
       specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
-      image: project2,
+      images: [project2, interiorKitchen, interiorBedroom, interiorLiving],
       title: "Casa Montaña",
       location: "Nueva Andalucía, Marbella, Spain",
       description: "Traditional Andalusian villa nestled in the hills above Puerto Banús. Stone archways, mature gardens with century-old palms, and views to La Concha mountain.",
       specs: "385m² | 4 Bed | 3 Bath | Garden",
     },
     {
-      image: project3,
+      images: [project3, interiorLiving, interiorKitchen, interiorBedroom],
       title: "Palazzo Sant'Angelo",
       location: "Cortona, Tuscany, Italy",
       description: "Restored 18th-century townhouse in the historic centro storico. Original terracotta floors, vaulted ceilings, and a private courtyard with a Renaissance fountain.",
       specs: "320m² | 4 Bed | 3 Bath | Courtyard",
     },
     {
-      image: project4,
+      images: [project4, interiorPool, interiorBedroom, interiorLiving],
       title: "Quinta do Mar",
       location: "Carvoeiro, Algarve, Portugal",
       description: "Clifftop estate with direct access to secluded cove beach. Multiple sun terraces, outdoor kitchen, and panoramic Atlantic views from every room.",
       specs: "545m² | 6 Bed | 5 Bath | Beachfront",
     },
     {
-      image: project5,
+      images: [project5, interiorLiving, interiorBedroom, interiorKitchen],
       title: "Mas des Oliviers",
       location: "Gordes, Luberon, France",
       description: "Authentic Provençal farmhouse surrounded by 3 hectares of olive groves and lavender fields. Exposed stone walls, oak beams, and a heated pool terrace.",
       specs: "420m² | 5 Bed | 4 Bath | Estate",
     },
     {
-      image: project6,
+      images: [project6, interiorPool, interiorKitchen, interiorLiving],
       title: "Residencia Port Adriano",
       location: "El Toro, Mallorca, Spain",
       description: "Boutique waterfront apartments with private marina berths. Rooftop infinity pool, concierge services, and views across the Bay of Palma.",
       specs: "12 Units | Pool | Marina",
     },
     {
-      image: project7,
+      images: [project7, interiorBedroom, interiorPool, interiorLiving],
       title: "Villa Blanca del Mar",
       location: "Jávea, Costa Blanca, Spain",
       description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
       specs: "475m² | 5 Bed | 4 Bath | Pool",
     },
     {
-      image: project8,
+      images: [project8, interiorLiving, interiorPool, interiorBedroom],
       title: "Villa Oia Sunset",
       location: "Oia, Santorini, Greece",
       description: "Iconic caldera-view property carved into the volcanic cliff. Minimalist Cycladic design, private infinity pool, and front-row seats to the famous Oia sunset.",
       specs: "340m² | 4 Bed | 3 Bath | Caldera View",
     },
     {
-      image: project9,
+      images: [project9, interiorKitchen, interiorLiving, interiorBedroom],
       title: "Podere San Lorenzo",
       location: "Montalcino, Tuscany, Italy",
       description: "Elegant stone farmhouse in the heart of Brunello wine country. Barrel-vaulted dining room, alfresco terrace, and 2 hectares of private vineyards.",
@@ -82,11 +87,13 @@ const ProjectGallery = () => {
 
   const openLightbox = (index: number) => {
     setSelectedProject(index);
+    setSelectedImageIndex(0);
     document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setSelectedProject(null);
+    setSelectedImageIndex(0);
     document.body.style.overflow = "auto";
   };
 
@@ -97,6 +104,17 @@ const ProjectGallery = () => {
         ? (selectedProject + 1) % projects.length
         : (selectedProject - 1 + projects.length) % projects.length;
     setSelectedProject(newIndex);
+    setSelectedImageIndex(0);
+  };
+
+  const navigateImage = (direction: "prev" | "next") => {
+    if (selectedProject === null) return;
+    const imagesCount = projects[selectedProject].images.length;
+    const newIndex =
+      direction === "next"
+        ? (selectedImageIndex + 1) % imagesCount
+        : (selectedImageIndex - 1 + imagesCount) % imagesCount;
+    setSelectedImageIndex(newIndex);
   };
 
   return (
@@ -125,7 +143,7 @@ const ProjectGallery = () => {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={project.image}
+                  src={project.images[0]}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -156,31 +174,86 @@ const ProjectGallery = () => {
           <div className="fixed inset-0 z-50 bg-foreground/95 flex items-center justify-center p-4">
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 p-2 text-primary-foreground hover:text-primary transition-colors"
+              className="absolute top-4 right-4 p-2 text-primary-foreground hover:text-primary transition-colors z-10"
             >
               <X className="w-8 h-8" />
             </button>
 
             <button
               onClick={() => navigateProject("prev")}
-              className="absolute left-4 p-2 text-primary-foreground hover:text-primary transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-primary-foreground hover:text-primary transition-colors z-10"
             >
               <ChevronLeft className="w-10 h-10" />
             </button>
 
             <button
               onClick={() => navigateProject("next")}
-              className="absolute right-4 p-2 text-primary-foreground hover:text-primary transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-primary-foreground hover:text-primary transition-colors z-10"
             >
               <ChevronRight className="w-10 h-10" />
             </button>
 
-            <div className="max-w-5xl w-full grid lg:grid-cols-2 gap-8 items-center">
-              <img
-                src={projects[selectedProject].image}
-                alt={projects[selectedProject].title}
-                className="w-full rounded-xl shadow-2xl"
-              />
+            <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                {/* Main Image */}
+                <div className="relative">
+                  <img
+                    src={projects[selectedProject].images[selectedImageIndex]}
+                    alt={`${projects[selectedProject].title} - Image ${selectedImageIndex + 1}`}
+                    className="w-full rounded-xl shadow-2xl aspect-[4/3] object-cover"
+                  />
+                  
+                  {/* Image Navigation Arrows */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage("prev");
+                    }}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-foreground/50 rounded-full text-primary-foreground hover:bg-foreground/70 transition-colors"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage("next");
+                    }}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-foreground/50 rounded-full text-primary-foreground hover:bg-foreground/70 transition-colors"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+
+                  {/* Image Counter */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-foreground/50 rounded-full text-primary-foreground text-sm">
+                    {selectedImageIndex + 1} / {projects[selectedProject].images.length}
+                  </div>
+                </div>
+
+                {/* Thumbnail Gallery */}
+                <div className="flex gap-2 justify-center">
+                  {projects[selectedProject].images.map((image, imgIndex) => (
+                    <button
+                      key={imgIndex}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedImageIndex(imgIndex);
+                      }}
+                      className={`w-16 h-12 rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImageIndex === imgIndex
+                          ? "border-primary"
+                          : "border-transparent opacity-60 hover:opacity-100"
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`${projects[selectedProject].title} thumbnail ${imgIndex + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div className="text-primary-foreground">
                 <h3 className="text-3xl font-serif font-bold mb-2">
                   {projects[selectedProject].title}
