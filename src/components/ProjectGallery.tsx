@@ -17,7 +17,7 @@ const ProjectGallery = () => {
       title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
       description: "A stunning infinity pool villa with panoramic Mediterranean views, featuring 5 bedrooms and contemporary open-plan living.",
-      specs: "450m² | 5 Bed | 4 Bath | Pool",
+      specs: "100m² | 2 Bed | 2 Bath | Pool",
     },
     {
       image: project2,
