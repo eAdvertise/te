@@ -22,6 +22,11 @@ import stefonmariaJacuzzi from "@/assets/stefonmaria-jacuzzi.jpg";
 import stefonmariaBalcony from "@/assets/stefonmaria-balcony.jpg";
 import stefonmariaTerrace from "@/assets/stefonmaria-terrace.jpg";
 import stefonmariaDining from "@/assets/stefonmaria-dining.jpg";
+import stefonmariaFront from "@/assets/stefonmaria-front.jpg";
+import stefonmariaPatio from "@/assets/stefonmaria-patio.jpg";
+import stefonmariaArch from "@/assets/stefonmaria-arch.jpg";
+import stefonmariaSide from "@/assets/stefonmaria-side.jpg";
+import stefonmariaConstruction from "@/assets/stefonmaria-construction.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -29,7 +34,7 @@ const ProjectGallery = () => {
 
   const projects = [
     {
-      images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining],
+      images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining, stefonmariaFront, stefonmariaPatio, stefonmariaArch, stefonmariaSide, stefonmariaConstruction],
       title: "Villa Stefonmaria",
       location: "Kissonerga, Pafos, Cyprus",
       description: "Tailored made Villa with a pool, jacuzzi, under floor heating, pool water fall, fountain and many other facilities.",
