@@ -17,10 +17,10 @@ const Hero = () => {
           </span>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground mb-6 leading-tight">
-            Crafting Dream Homes on the Mediterranean Coast
+            Mediterranean Estates
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">Aim for excellence, we transform visions into stunning Mediterranean properties. From luxury villas to coastal retreats, we build with passion and precision.</p>
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">A premier property construction and development company specializing in luxury coastal homes. Our team of architects, engineers, and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" className="group">
