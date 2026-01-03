@@ -55,7 +55,7 @@ const ProjectGallery = () => {
     description: "An older house that needed external attention and some structural reinforcement.",
     specs: "90m² | 3 Bed | 1 Bath | Courtyard"
   }, {
-    images: [shopRenovation1, shopRenovation2, shopRenovation3, shopRenovation4, project4, interiorPool, interiorBedroom, interiorLiving],
+    images: [shopRenovation1, shopRenovation2, shopRenovation3, shopRenovation4],
     title: "Shop Renovation",
     location: "Pafos, Cyprus",
     description: "Structural issues shop that needed Civil Engineer involvement and special material use.",
