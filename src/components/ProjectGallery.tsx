@@ -7,6 +7,9 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
+import project7 from "@/assets/project-7.jpg";
+import project8 from "@/assets/project-8.jpg";
+import project9 from "@/assets/project-9.jpg";
 
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -53,6 +56,27 @@ const ProjectGallery = () => {
       location: "Mallorca, Spain",
       description: "Exclusive apartment complex with rooftop terraces, communal pools, and stunning coastal views.",
       specs: "12 Units | Pool | Terraces",
+    },
+    {
+      image: project7,
+      title: "Costa Blanca Villa",
+      location: "Valencia, Spain",
+      description: "Magnificent Mediterranean estate with traditional architecture, expansive pool, and lush palm gardens.",
+      specs: "480m² | 5 Bed | 4 Bath | Pool",
+    },
+    {
+      image: project8,
+      title: "Sunset Cliff House",
+      location: "Santorini, Greece",
+      description: "Ultra-modern cliffside retreat with panoramic ocean views, infinity pool, and minimalist interiors.",
+      specs: "350m² | 4 Bed | 3 Bath | Ocean View",
+    },
+    {
+      image: project9,
+      title: "Villa Toscana",
+      location: "Siena, Italy",
+      description: "Elegant stone manor with arched terraces, Mediterranean gardens, and authentic Tuscan charm.",
+      specs: "520m² | 6 Bed | 5 Bath | Garden",
     },
   ];
 
