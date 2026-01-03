@@ -22,7 +22,7 @@ const Header = () => {
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-center h-28">
           <a href="#home" className="flex items-center gap-2">
             <img alt="Mediterranean Estates Logo" className="h-20 w-auto" src="/lovable-uploads/e077da15-530d-44ca-826c-f18de54bb951.png" />
           </a>
