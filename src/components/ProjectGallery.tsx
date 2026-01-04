@@ -139,7 +139,7 @@ const ProjectGallery = () => {
 
   const getCardImageIndex = (projectIndex: number) => cardImageIndices[projectIndex] || 0;
   
-  const projectsWithArrows = [0, 1, 2, 3]; // Villa Stefonmaria, Timi Village, Shop Renovation, Shop Floor Extension
+  const projectsWithArrows = [0, 1, 2, 3, 4]; // Villa Stefonmaria, Timi Village, Shop Renovation, Shop Floor Extension, Peyia Townhouse
   return <section id="projects" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
