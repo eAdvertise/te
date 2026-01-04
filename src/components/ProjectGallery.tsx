@@ -66,6 +66,7 @@ import blanca6 from "@/assets/blanca-6.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
     images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining, stefonmariaFront, stefonmariaPatio, stefonmariaArch, stefonmariaSide, stefonmariaConstruction],
     title: "Villa Stefonmaria",
@@ -125,6 +126,15 @@ const ProjectGallery = () => {
     const newIndex = direction === "next" ? (selectedImageIndex + 1) % imagesCount : (selectedImageIndex - 1 + imagesCount) % imagesCount;
     setSelectedImageIndex(newIndex);
   };
+
+  const navigateCardImage = (e: React.MouseEvent, direction: "prev" | "next") => {
+    e.stopPropagation();
+    const imagesCount = projects[0].images.length;
+    const newIndex = direction === "next" 
+      ? (cardImageIndex + 1) % imagesCount 
+      : (cardImageIndex - 1 + imagesCount) % imagesCount;
+    setCardImageIndex(newIndex);
+  };
   return <section id="projects" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -143,9 +153,37 @@ const ProjectGallery = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => <div key={index} className="group cursor-pointer rounded-xl overflow-hidden bg-background shadow-sm hover:shadow-xl transition-all duration-300" onClick={() => openLightbox(index)}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={project.images[0]} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <img src={index === 0 ? project.images[cardImageIndex] : project.images[0]} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                {index === 0 && project.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={(e) => navigateCardImage(e, "prev")}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button
+                      onClick={(e) => navigateCardImage(e, "next")}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </button>
+                    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                      {project.images.map((_, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            imgIndex === cardImageIndex 
+                              ? 'bg-primary-foreground' 
+                              : 'bg-primary-foreground/40'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
                   <div className="flex items-center gap-2 text-primary-foreground/90 text-sm mb-2">
                     <MapPin className="w-4 h-4" />
                     {project.location}
