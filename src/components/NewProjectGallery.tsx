@@ -13,21 +13,25 @@ const NewProjectGallery = () => {
       title: "New Villa Project",
       location: "Pafos, Cyprus",
       description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
-      specs: "4 Bedrooms • 3 Bathrooms • Pool • 350m²"
+      specs: "4 Bedrooms • 3 Bathrooms • Pool • 350m²",
+      type: "image" as const
     },
     {
-      images: ["/placeholder.svg"],
-      title: "Modern Home Development",
-      location: "Limassol, Cyprus",
-      description: "Coming soon - Contemporary Mediterranean home with stunning sea views and sustainable design.",
-      specs: "3 Bedrooms • 2 Bathrooms • Garden • 280m²"
+      images: [],
+      title: "Project Location",
+      location: "Pafos, Cyprus",
+      description: "View the exact location of our new development.",
+      specs: "Prime Location • Sea Views",
+      type: "map" as const,
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52456.36454813812!2d32.38936565!3d34.7754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e706c222c1e9e1%3A0x9b18463ac37ab507!2sPaphos%2C%20Cyprus!5e0!3m2!1sen!2s!4v1704000000000!5m2!1sen!2s"
     },
     {
       images: ["/placeholder.svg"],
       title: "Coastal Residence",
       location: "Coral Bay, Cyprus",
       description: "Coming soon - Beachfront property development with direct beach access and panoramic ocean views.",
-      specs: "5 Bedrooms • 4 Bathrooms • Pool • 420m²"
+      specs: "5 Bedrooms • 4 Bathrooms • Pool • 420m²",
+      type: "image" as const
     }
   ];
 
@@ -74,16 +78,27 @@ const NewProjectGallery = () => {
             <div
               key={index}
               className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`}
-              onClick={() => openLightbox(index)}
+              onClick={() => project.type === 'image' && openLightbox(index)}
             >
               <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
-                <img
-                  src={project.images[0]}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                {project.type === 'map' ? (
+                  <iframe
+                    src={project.mapUrl}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Project Location Map"
+                  />
+                ) : (
+                  <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
                   <h3 className={`font-semibold text-primary-foreground mb-1 ${index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>
                     {project.title}
                   </h3>
