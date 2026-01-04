@@ -157,6 +157,29 @@ const NewProjectGallery = () => {
                     </>
                   )}
                 </div>
+                
+                {/* Thumbnail Strip */}
+                {projects[selectedProject].images.length > 1 && (
+                  <div className="flex gap-2 justify-center">
+                    {projects[selectedProject].images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={`w-16 h-16 rounded-lg overflow-hidden transition-all ${
+                          index === selectedImageIndex 
+                            ? 'ring-2 ring-primary scale-105' 
+                            : 'opacity-60 hover:opacity-100'
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`Thumbnail ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="text-primary-foreground">
