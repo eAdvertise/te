@@ -94,7 +94,7 @@ const ProjectGallery = () => {
     description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
     specs: "120m² | 3 Bed | 2 Bath"
   }, {
-    images: [blanca1, blanca2, blanca3],
+    images: [blanca2, blanca3],
     title: "Villa Blanca del Mar",
     location: "Jávea, Costa Blanca, Spain",
     description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
