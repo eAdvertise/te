@@ -79,7 +79,7 @@ const ProjectGallery = () => {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
     title: "Peyia Townhouse",
     location: "Peyia, Pafos, Cyprus",
-    description: "Boutique waterfront apartments with private marina berths. Rooftop infinity pool, concierge services, and views across the Bay of Palma.",
+    description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
     specs: "12 Units | Pool | Marina"
   }, {
     images: [project7, interiorBedroom, interiorPool, interiorLiving],
