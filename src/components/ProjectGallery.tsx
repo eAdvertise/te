@@ -79,12 +79,6 @@ const ProjectGallery = () => {
     location: "Jávea, Costa Blanca, Spain",
     description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
-  }, {
-    images: [project9, interiorKitchen, interiorLiving, interiorBedroom],
-    title: "Podere San Lorenzo",
-    location: "Montalcino, Tuscany, Italy",
-    description: "Elegant stone farmhouse in the heart of Brunello wine country. Barrel-vaulted dining room, alfresco terrace, and 2 hectares of private vineyards.",
-    specs: "510m² | 6 Bed | 5 Bath | Vineyard"
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
