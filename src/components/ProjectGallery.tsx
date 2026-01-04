@@ -77,7 +77,7 @@ const ProjectGallery = () => {
     description: "Shop needed to close the mid floor for office space.",
     specs: "30m² | Commercial"
   }, {
-    images: [peyia1, interiorPool, interiorKitchen, interiorLiving],
+    images: [peyia1],
     title: "Peyia Townhouse",
     location: "Peyia, Pafos, Cyprus",
     description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
