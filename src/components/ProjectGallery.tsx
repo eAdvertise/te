@@ -44,6 +44,7 @@ import shopFloor1 from "@/assets/shop-floor-1.jpg";
 import shopFloor2 from "@/assets/shop-floor-2.jpg";
 import shopFloor3 from "@/assets/shop-floor-3.jpg";
 import shopFloor4 from "@/assets/shop-floor-4.jpg";
+import shopFloor5 from "@/assets/shop-floor-5.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -66,7 +67,7 @@ const ProjectGallery = () => {
     description: "Structural issues shop that needed Civil Engineer involvement and special material use.",
     specs: "75m² | Shop"
   }, {
-    images: [shopFloor1, shopFloor2, shopFloor3, shopFloor4],
+    images: [shopFloor1, shopFloor2, shopFloor3, shopFloor4, shopFloor5],
     title: "Shop Floor Extension",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Shop needed to close the mid floor for office space.",
