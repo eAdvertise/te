@@ -37,7 +37,7 @@ const Hero = () => {
                 <Building2 className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary-foreground">40+</div>
+                <div className="text-2xl font-bold text-primary-foreground">20+</div>
                 <div className="text-sm text-primary-foreground/70">Projects</div>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Hero = () => {
                 <Award className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary-foreground">25+</div>
+                <div className="text-2xl font-bold text-primary-foreground">15+</div>
                 <div className="text-sm text-primary-foreground/70">Years</div>
               </div>
             </div>
