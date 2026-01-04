@@ -77,7 +77,7 @@ const ProjectGallery = () => {
     specs: "30m² | Commercial"
   }, {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
-    title: "Residencia Port Adriano",
+    title: "Peyia Townhouse",
     location: "El Toro, Mallorca, Spain",
     description: "Boutique waterfront apartments with private marina berths. Rooftop infinity pool, concierge services, and views across the Bay of Palma.",
     specs: "12 Units | Pool | Marina"
