@@ -53,6 +53,7 @@ import peyia2 from "@/assets/peyia-2.jpg";
 import peyia3 from "@/assets/peyia-3.jpg";
 import peyia4 from "@/assets/peyia-4.jpg";
 import peyia5 from "@/assets/peyia-5.jpg";
+import peyia6 from "@/assets/peyia-6.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -81,7 +82,7 @@ const ProjectGallery = () => {
     description: "Shop needed to close the mid floor for office space.",
     specs: "30m² | Commercial"
   }, {
-    images: [peyia1, peyia2, peyia3, peyia4, peyia5],
+    images: [peyia1, peyia2, peyia3, peyia4, peyia5, peyia6],
     title: "Peyia Townhouse",
     location: "Peyia, Pafos, Cyprus",
     description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
