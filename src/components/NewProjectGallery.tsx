@@ -19,7 +19,7 @@ const NewProjectGallery = () => {
     {
       images: [],
       title: "Project Location",
-      location: "Pafos, Cyprus",
+      location: "Chlorakas, Pafos, Cyprus",
       description: "View the exact location of our new development.",
       specs: "Prime Location • Sea Views",
       type: "map" as const,
