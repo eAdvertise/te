@@ -141,18 +141,18 @@ const NewProjectGallery = () => {
                           e.stopPropagation();
                           navigateImage("prev");
                         }}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-foreground/50 rounded-full text-primary-foreground hover:bg-foreground/70 transition-colors"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-background/90 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110"
                       >
-                        <ChevronLeft className="w-6 h-6" />
+                        <ChevronLeft className="w-8 h-8" />
                       </button>
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           navigateImage("next");
                         }}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-foreground/50 rounded-full text-primary-foreground hover:bg-foreground/70 transition-colors"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-background/90 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110"
                       >
-                        <ChevronRight className="w-6 h-6" />
+                        <ChevronRight className="w-8 h-8" />
                       </button>
                     </>
                   )}
