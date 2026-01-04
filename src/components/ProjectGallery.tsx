@@ -66,7 +66,7 @@ import blanca6 from "@/assets/blanca-6.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [cardImageIndex, setCardImageIndex] = useState(0);
+  const [cardImageIndices, setCardImageIndices] = useState<Record<number, number>>({});
   const projects = [{
     images: [stefonmariaExterior, stefonmariaPool, stefonmariaEntrance, stefonmariaLiving, stefonmariaJacuzzi, stefonmariaBalcony, stefonmariaTerrace, stefonmariaDining, stefonmariaFront, stefonmariaPatio, stefonmariaArch, stefonmariaSide, stefonmariaConstruction],
     title: "Villa Stefonmaria",
@@ -127,14 +127,19 @@ const ProjectGallery = () => {
     setSelectedImageIndex(newIndex);
   };
 
-  const navigateCardImage = (e: React.MouseEvent, direction: "prev" | "next") => {
+  const navigateCardImage = (e: React.MouseEvent, projectIndex: number, direction: "prev" | "next") => {
     e.stopPropagation();
-    const imagesCount = projects[0].images.length;
+    const imagesCount = projects[projectIndex].images.length;
+    const currentIndex = cardImageIndices[projectIndex] || 0;
     const newIndex = direction === "next" 
-      ? (cardImageIndex + 1) % imagesCount 
-      : (cardImageIndex - 1 + imagesCount) % imagesCount;
-    setCardImageIndex(newIndex);
+      ? (currentIndex + 1) % imagesCount 
+      : (currentIndex - 1 + imagesCount) % imagesCount;
+    setCardImageIndices(prev => ({ ...prev, [projectIndex]: newIndex }));
   };
+
+  const getCardImageIndex = (projectIndex: number) => cardImageIndices[projectIndex] || 0;
+  
+  const projectsWithArrows = [0, 1]; // Villa Stefonmaria and Timi Village
   return <section id="projects" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -153,17 +158,17 @@ const ProjectGallery = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => <div key={index} className="group cursor-pointer rounded-xl overflow-hidden bg-background shadow-sm hover:shadow-xl transition-all duration-300" onClick={() => openLightbox(index)}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={index === 0 ? project.images[cardImageIndex] : project.images[0]} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                {index === 0 && project.images.length > 1 && (
+                <img src={projectsWithArrows.includes(index) ? project.images[getCardImageIndex(index)] : project.images[0]} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                {projectsWithArrows.includes(index) && project.images.length > 1 && (
                   <>
                     <button
-                      onClick={(e) => navigateCardImage(e, "prev")}
+                      onClick={(e) => navigateCardImage(e, index, "prev")}
                       className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
                     >
                       <ChevronLeft className="w-6 h-6" />
                     </button>
                     <button
-                      onClick={(e) => navigateCardImage(e, "next")}
+                      onClick={(e) => navigateCardImage(e, index, "next")}
                       className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
                     >
                       <ChevronRight className="w-6 h-6" />
@@ -173,7 +178,7 @@ const ProjectGallery = () => {
                         <div
                           key={imgIndex}
                           className={`w-2 h-2 rounded-full transition-all ${
-                            imgIndex === cardImageIndex 
+                            imgIndex === getCardImageIndex(index) 
                               ? 'bg-primary-foreground' 
                               : 'bg-primary-foreground/40'
                           }`}
