@@ -13,7 +13,7 @@ const NewProjectGallery = () => {
       title: "Chlorakas Townhouses",
       location: "Chlorakas, Pafos, Cyprus",
       description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
-      specs: "4 Bedrooms • 3 Bathrooms • Pool • 350m²",
+      specs: "2 & 3 Bedroom Townhouses • Pool • 87-110m²",
       type: "image" as const
     },
     {
