@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import newProjectAerial from "@/assets/new-project-aerial.webp";
 import chlorakas1 from "@/assets/chlorakas-1.jpg";
 import chlorakas2 from "@/assets/chlorakas-2.jpg";
-import chlorakasMap from "@/assets/chlorakas-map.jpg";
 
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -29,7 +28,7 @@ const NewProjectGallery = () => {
       mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
     },
     {
-      images: [chlorakasMap],
+      images: ["/placeholder.svg"],
       title: "Coastal Residence",
       location: "Coral Bay, Cyprus",
       description: "Coming soon - Beachfront property development with direct beach access and panoramic ocean views.",
