@@ -129,8 +129,9 @@ const ProjectGallery = () => {
             Completed Projects
           </h2>
           <p className="text-muted-foreground">
-            Explore our collection of properties that we have attended work to. Each one 
-            a testament to our commitment to excellence and attention to detail.
+            Explore our collection of properties that we have attended work to. 
+            Have compiled complete new project, repairs, renovations and other projects to exhibit the spectrum of our work. 
+            Each one a testament to our commitment to excellence and attention to detail.
           </p>
         </div>
 
