@@ -99,7 +99,7 @@ const ProjectGallery = () => {
   }, {
     images: [blanca2, blanca4, blanca5, blanca6],
     title: "Decorative Gypsum Board",
-    location: "Jávea, Costa Blanca, Spain",
+    location: "Pafos, Cyprus",
     description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }];
