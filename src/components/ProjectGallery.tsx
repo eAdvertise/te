@@ -100,7 +100,7 @@ const ProjectGallery = () => {
     images: [blanca2, blanca4, blanca5, blanca6],
     title: "Decorative Gypsum Board",
     location: "Pafos, Cyprus",
-    description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
+    description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining functionality with Mediterranean aesthetics.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }];
   const openLightbox = (index: number) => {
