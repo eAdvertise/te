@@ -65,7 +65,7 @@ const ProjectGallery = () => {
     images: [project5, interiorLiving, interiorBedroom, interiorKitchen],
     title: "Shop Floor Extension",
     location: "Chlorakas, Pafos, Cyprus",
-    description: "Authentic Provençal farmhouse surrounded by 3 hectares of olive groves and lavender fields. Exposed stone walls, oak beams, and a heated pool terrace.",
+    description: "Shop needed to close the mid floor for office and wanted that to be done with real wood.",
     specs: "420m² | 5 Bed | 4 Bath | Estate"
   }, {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
