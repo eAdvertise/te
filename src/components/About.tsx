@@ -10,9 +10,7 @@ const About = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-6">Building Mediterranean Excellence </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              tE is a premier property construction and development company specializing 
-              renovation of homes or building brand new. Our team of architects, engineers, 
-              and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.
+              tE is a quality property construction and development company specializing in home renovation or building brand new. Our co-operative team of architects, engineers, and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               From sun-drenched villas overlooking the azure sea to charming townhouses 
