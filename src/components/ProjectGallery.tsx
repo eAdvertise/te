@@ -80,12 +80,6 @@ const ProjectGallery = () => {
     description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }, {
-    images: [project8, interiorLiving, interiorPool, interiorBedroom],
-    title: "Villa Oia Sunset",
-    location: "Oia, Santorini, Greece",
-    description: "Iconic caldera-view property carved into the volcanic cliff. Minimalist Cycladic design, private infinity pool, and front-row seats to the famous Oia sunset.",
-    specs: "340m² | 4 Bed | 3 Bath | Caldera View"
-  }, {
     images: [project9, interiorKitchen, interiorLiving, interiorBedroom],
     title: "Podere San Lorenzo",
     location: "Montalcino, Tuscany, Italy",
