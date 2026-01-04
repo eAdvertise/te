@@ -58,6 +58,7 @@ import peyia7 from "@/assets/peyia-7.jpg";
 import peyia8 from "@/assets/peyia-8.jpg";
 import peyia9 from "@/assets/peyia-9.jpg";
 import blanca1 from "@/assets/blanca-1.jpg";
+import blanca2 from "@/assets/blanca-2.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -92,7 +93,7 @@ const ProjectGallery = () => {
     description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
     specs: "120m² | 3 Bed | 2 Bath"
   }, {
-    images: [],
+    images: [blanca1, blanca2],
     title: "Villa Blanca del Mar",
     location: "Jávea, Costa Blanca, Spain",
     description: "Classic Mediterranean estate on the Montgo hillside. Moorish-inspired architecture, landscaped tropical gardens, and a 15-meter swimming pool.",
