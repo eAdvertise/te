@@ -78,7 +78,7 @@ const ProjectGallery = () => {
   }, {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
     title: "Peyia Townhouse",
-    location: "El Toro, Mallorca, Spain",
+    location: "Peyia, Pafos, Cyprus",
     description: "Boutique waterfront apartments with private marina berths. Rooftop infinity pool, concierge services, and views across the Bay of Palma.",
     specs: "12 Units | Pool | Marina"
   }, {
