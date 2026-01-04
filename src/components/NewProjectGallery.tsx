@@ -12,22 +12,22 @@ const NewProjectGallery = () => {
       images: [newProjectAerial],
       title: "New Villa Project",
       location: "Pafos, Cyprus",
-      description: "Coming soon - A brand new luxury villa development.",
-      specs: "TBD"
+      description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
+      specs: "4 Bedrooms • 3 Bathrooms • Pool • 350m²"
     },
     {
       images: ["/placeholder.svg"],
       title: "Modern Home Development",
       location: "Limassol, Cyprus",
-      description: "Coming soon - Contemporary Mediterranean home.",
-      specs: "TBD"
+      description: "Coming soon - Contemporary Mediterranean home with stunning sea views and sustainable design.",
+      specs: "3 Bedrooms • 2 Bathrooms • Garden • 280m²"
     },
     {
       images: ["/placeholder.svg"],
       title: "Coastal Residence",
       location: "Coral Bay, Cyprus",
-      description: "Coming soon - Beachfront property development.",
-      specs: "TBD"
+      description: "Coming soon - Beachfront property development with direct beach access and panoramic ocean views.",
+      specs: "5 Bedrooms • 4 Bathrooms • Pool • 420m²"
     }
   ];
 
