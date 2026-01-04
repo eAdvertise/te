@@ -120,7 +120,7 @@ const ProjectGallery = () => {
             Completed Projects
           </h2>
           <p className="text-muted-foreground">
-            Explore our collection of luxury Mediterranean properties, each one 
+            Explore our collection of properties that we have attended work to. Each one 
             a testament to our commitment to excellence and attention to detail.
           </p>
         </div>
