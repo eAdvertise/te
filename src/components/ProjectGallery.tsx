@@ -66,7 +66,7 @@ const ProjectGallery = () => {
     title: "Shop Floor Extension",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Shop needed to close the mid floor for office space.",
-    specs: "420m² | 5 Bed | 4 Bath | Estate"
+    specs: "30m² | Commercial"
   }, {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
     title: "Residencia Port Adriano",
