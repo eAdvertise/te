@@ -63,7 +63,7 @@ const ProjectGallery = () => {
     specs: "75m² | Shop"
   }, {
     images: [project5, interiorLiving, interiorBedroom, interiorKitchen],
-    title: "Mas des Oliviers",
+    title: "Shop Floor Extension",
     location: "Gordes, Luberon, France",
     description: "Authentic Provençal farmhouse surrounded by 3 hectares of olive groves and lavender fields. Exposed stone walls, oak beams, and a heated pool terrace.",
     specs: "420m² | 5 Bed | 4 Bath | Estate"
