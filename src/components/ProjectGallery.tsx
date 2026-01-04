@@ -80,7 +80,7 @@ const ProjectGallery = () => {
     title: "Peyia Townhouse",
     location: "Peyia, Pafos, Cyprus",
     description: "Inside and Outside attention needed on this Townhouse.\nHidden structural problems as of insulation and structural omissions caused major issues to be addressed.",
-    specs: "12 Units | Pool | Marina"
+    specs: "120m²"
   }, {
     images: [project7, interiorBedroom, interiorPool, interiorLiving],
     title: "Villa Blanca del Mar",
