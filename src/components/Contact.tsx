@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@mediterraneanestates.com", "projects@mediterraneanestates.com"],
+      details: ["info@te.properties"],
     },
     {
       icon: Clock,
