@@ -132,7 +132,7 @@ const ProjectGallery = () => {
             Our Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-4">
-            Completed Projects
+            OUR NEW PROJECTS
           </h2>
           <p className="text-muted-foreground">
             Explore our collection of properties that we have attended work to. 
