@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Calendar, Euro } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasMap from "@/assets/chlorakas-map.jpg";
 import chlorakas1 from "@/assets/chlorakas-1.jpg";
@@ -153,6 +153,87 @@ const NewProjectGallery = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Chlorakas Townhouses Details Section */}
+        <div className="mt-12 bg-card rounded-xl p-8 shadow-sm">
+          <h3 className="text-2xl font-serif font-bold text-foreground mb-6">Chlorakas Townhouses - Project Details</h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex items-start gap-3">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Euro className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">Starting Price</h4>
+                <p className="text-muted-foreground">From €285,000</p>
+                <p className="text-sm text-muted-foreground/70">Flexible payment plans available</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">Availability</h4>
+                <p className="text-muted-foreground">Pre-sales Now Open</p>
+                <p className="text-sm text-muted-foreground/70">Expected completion: Q4 2025</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Phone className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">Call Us</h4>
+                <p className="text-muted-foreground">+357 99 123 456</p>
+                <p className="text-sm text-muted-foreground/70">Mon-Sat: 9am - 6pm</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">Email Us</h4>
+                <p className="text-muted-foreground">info@example.com</p>
+                <p className="text-sm text-muted-foreground/70">We reply within 24 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-border">
+            <h4 className="font-semibold text-foreground mb-3">Project Highlights</h4>
+            <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                2 & 3 Bedroom options
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                Private swimming pool
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                Modern architecture
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                Energy efficient design
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                Close to amenities
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                5 min to the beach
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Lightbox */}
