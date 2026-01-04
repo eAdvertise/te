@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["50 Tombs of the Kings Road", "08008 Barcelona, Spain"],
+      details: ["50 Tombs of the Kings Road", "8046, Pafos, Cyprus"],
     },
     {
       icon: Phone,
