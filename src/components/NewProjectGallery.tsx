@@ -2,6 +2,7 @@ import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import newProjectAerial from "@/assets/new-project-aerial.webp";
+import chlorakas1 from "@/assets/chlorakas-1.jpg";
 
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -9,7 +10,7 @@ const NewProjectGallery = () => {
 
   const projects = [
     {
-      images: [newProjectAerial],
+      images: [newProjectAerial, chlorakas1],
       title: "Chlorakas Townhouses",
       location: "Chlorakas, Pafos, Cyprus",
       description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
