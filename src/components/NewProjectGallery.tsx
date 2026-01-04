@@ -72,10 +72,10 @@ const NewProjectGallery = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300"
+              className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`}
               onClick={() => openLightbox(index)}
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                 <img
                   src={project.images[0]}
                   alt={project.title}
@@ -90,8 +90,8 @@ const NewProjectGallery = () => {
                   <p className="text-primary-foreground/80 text-sm">{project.specs}</p>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-1">
+              <div className={`p-6 ${index === 0 ? 'lg:p-8' : ''}`}>
+                <h3 className={`font-semibold text-foreground mb-1 ${index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground text-sm flex items-center gap-2">
