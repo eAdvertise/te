@@ -25,7 +25,7 @@ const NewProjectGallery = () => {
       description: "View the exact location of our new development.",
       specs: "Prime Location • Near the Sea",
       type: "map" as const,
-      mapUrl: "https://maps.google.com/maps?q=Makrygianni+Street,+Chlorakas,+Paphos,+Cyprus&z=17&output=embed"
+      mapUrl: "https://maps.google.com/maps?q=34.7948,32.4150&z=18&output=embed"
     },
     {
       images: ["/placeholder.svg"],
