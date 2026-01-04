@@ -131,9 +131,7 @@ const ProjectGallery = () => {
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
             Our Portfolio
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-4">
-            OUR NEW PROJECTS
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-4">COMPLETED PROJECTS</h2>
           <p className="text-muted-foreground">
             Explore our collection of properties that we have attended work to. 
             Have compiled complete new project, repairs, renovations and other projects to exhibit the spectrum of our work. 
