@@ -32,7 +32,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+357 97529749", "+34 987 654 321"],
+      details: ["+357 97529749"],
     },
     {
       icon: Mail,
