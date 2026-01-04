@@ -25,7 +25,7 @@ const NewProjectGallery = () => {
       description: "View the exact location of our new development.",
       specs: "Prime Location • Near the Sea",
       type: "map" as const,
-      mapUrl: "https://www.google.com/maps?q=34.7939,32.4147&z=15&output=embed"
+      mapUrl: "https://maps.google.com/maps?q=34.7939,32.4147&t=&z=15&ie=UTF8&iwloc=B&output=embed"
     },
     {
       images: ["/placeholder.svg"],
