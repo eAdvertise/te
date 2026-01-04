@@ -8,6 +8,7 @@ import chlorakas2 from "@/assets/chlorakas-2.jpg";
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [cardImageIndex, setCardImageIndex] = useState(0);
 
   const projects = [
     {
@@ -58,6 +59,15 @@ const NewProjectGallery = () => {
     setSelectedImageIndex(newIndex);
   };
 
+  const navigateCardImage = (e: React.MouseEvent, direction: "prev" | "next") => {
+    e.stopPropagation();
+    const imagesCount = projects[0].images.length;
+    const newIndex = direction === "next" 
+      ? (cardImageIndex + 1) % imagesCount 
+      : (cardImageIndex - 1 + imagesCount) % imagesCount;
+    setCardImageIndex(newIndex);
+  };
+
   return (
     <section id="new-projects" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -93,11 +103,41 @@ const NewProjectGallery = () => {
                     title="Project Location Map"
                   />
                 ) : (
-                  <img
-                    src={project.images[0]}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <>
+                    <img
+                      src={index === 0 ? project.images[cardImageIndex] : project.images[0]}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {index === 0 && project.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={(e) => navigateCardImage(e, "prev")}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                        >
+                          <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                          onClick={(e) => navigateCardImage(e, "next")}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                        >
+                          <ChevronRight className="w-6 h-6" />
+                        </button>
+                        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                          {project.images.map((_, imgIndex) => (
+                            <div
+                              key={imgIndex}
+                              className={`w-2 h-2 rounded-full transition-all ${
+                                imgIndex === cardImageIndex 
+                                  ? 'bg-primary-foreground' 
+                                  : 'bg-primary-foreground/40'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
