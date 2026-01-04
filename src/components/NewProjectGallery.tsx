@@ -23,7 +23,7 @@ const NewProjectGallery = () => {
       title: "Project Location",
       location: "Chlorakas, Pafos, Cyprus",
       description: "View the exact location of our new development.",
-      specs: "Prime Location • Sea Views",
+      specs: "Prime Location • Near the Sea",
       type: "map" as const,
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52456.36454813812!2d32.38936565!3d34.7754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e706c222c1e9e1%3A0x9b18463ac37ab507!2sPaphos%2C%20Cyprus!5e0!3m2!1sen!2s!4v1704000000000!5m2!1sen!2s"
     },
