@@ -64,8 +64,9 @@ const Footer = () => {
               Mediterranean Estates
             </h3>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
-              Premium property construction and development on the Mediterranean 
-              coast. Building dreams since 1998.
+              Quality property construction and development on the Mediterranean coast. 
+     
+ 
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => <a key={index} href={social.href} className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
