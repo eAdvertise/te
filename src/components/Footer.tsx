@@ -109,7 +109,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Mediterranean Estates. All rights reserved.
+            © {currentYear} tE. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
