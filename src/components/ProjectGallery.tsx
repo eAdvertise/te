@@ -100,7 +100,7 @@ const ProjectGallery = () => {
     images: [blanca2, blanca4, blanca5, blanca6],
     title: "Decorative Gypsum Board",
     location: "Pafos, Cyprus",
-    description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining functionality with Mediterranean aesthetics.",
+    description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining two elements the brick work on the base and the gypsum board.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }];
   const openLightbox = (index: number) => {
