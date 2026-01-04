@@ -159,7 +159,7 @@ const Contact = () => {
             {/* Google Maps */}
             <div className="mt-6 rounded-xl overflow-hidden h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.8454876654!2d32.40687571528677!3d34.76373238041768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e706c0c1d8e9f5%3A0x9a0c5c5c5c5c5c5c!2sTombs%20of%20the%20Kings%2C%20Paphos%2C%20Cyprus!5e0!3m2!1sen!2s!4v1699000000000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.0!2d32.4137!3d34.7605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e706c3e5a5f0f7%3A0x1c8c6f3e8e9a0b0c!2sTasmaria%20Aparthotel!5e0!3m2!1sen!2s!4v1699000000000!5m2!1sen!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
