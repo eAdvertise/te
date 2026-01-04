@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import newProjectAerial from "@/assets/new-project-aerial.webp";
 
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -8,7 +9,7 @@ const NewProjectGallery = () => {
 
   const projects = [
     {
-      images: ["/placeholder.svg"],
+      images: [newProjectAerial],
       title: "New Villa Project",
       location: "Pafos, Cyprus",
       description: "Coming soon - A brand new luxury villa development.",
