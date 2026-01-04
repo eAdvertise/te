@@ -65,7 +65,7 @@ const ProjectGallery = () => {
     images: [project5, interiorLiving, interiorBedroom, interiorKitchen],
     title: "Shop Floor Extension",
     location: "Chlorakas, Pafos, Cyprus",
-    description: "Shop needed to close the mid floor for office and wanted that to be done with real wood.",
+    description: "Shop needed to close the mid floor for office space and wanted that to be done with real wood.",
     specs: "420m² | 5 Bed | 4 Bath | Estate"
   }, {
     images: [project6, interiorPool, interiorKitchen, interiorLiving],
