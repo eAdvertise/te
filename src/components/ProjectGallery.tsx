@@ -63,8 +63,6 @@ import blanca3 from "@/assets/blanca-3.jpg";
 import blanca4 from "@/assets/blanca-4.jpg";
 import blanca5 from "@/assets/blanca-5.jpg";
 import blanca6 from "@/assets/blanca-6.jpg";
-import chlorakas1 from "@/assets/chlorakas-1.jpg";
-import chlorakas2 from "@/assets/chlorakas-2.jpg";
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -105,13 +103,6 @@ const ProjectGallery = () => {
     location: "Pafos, Cyprus",
     description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining two elements the brick work on the base and the gypsum board.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
-  }, {
-    images: [chlorakas1, chlorakas2],
-    imageCaptions: ["Free test", "Free test"],
-    title: "Chlorakas Townhouses",
-    location: "Chlorakas, Pafos, Cyprus",
-    description: "Modern townhouse development in the heart of Chlorakas.",
-    specs: "Townhouses"
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
@@ -148,7 +139,7 @@ const ProjectGallery = () => {
 
   const getCardImageIndex = (projectIndex: number) => cardImageIndices[projectIndex] || 0;
   
-  const projectsWithArrows = [0, 1, 2, 3, 4, 5, 6]; // All projects
+  const projectsWithArrows = [0, 1, 2, 3, 4, 5]; // All projects
   return <section id="projects" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -256,12 +247,6 @@ const ProjectGallery = () => {
                     {selectedImageIndex + 1} / {projects[selectedProject].images.length}
                   </div>
                 </div>
-                {/* Image Caption */}
-                {projects[selectedProject].imageCaptions?.[selectedImageIndex] && (
-                  <p className="text-center text-primary-foreground/80 text-sm mt-2">
-                    {projects[selectedProject].imageCaptions[selectedImageIndex]}
-                  </p>
-                )}
 
                 {/* Thumbnail Gallery */}
                 <div className="flex gap-2 justify-center">
