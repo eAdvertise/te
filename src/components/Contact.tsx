@@ -159,7 +159,7 @@ const Contact = () => {
             {/* Google Maps */}
             <div className="mt-6 rounded-xl overflow-hidden h-64">
               <iframe
-                src="https://maps.google.com/maps?q=34.770534,32.410629&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=34.7707,32.4097&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
