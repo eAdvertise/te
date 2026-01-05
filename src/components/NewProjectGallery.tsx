@@ -1,20 +1,12 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import chlorakasMap from "@/assets/chlorakas-map.jpg";
-import chlorakas1 from "@/assets/chlorakas-1.jpg";
-import chlorakas2 from "@/assets/chlorakas-2.jpg";
-import chlorakasMap3 from "@/assets/chlorakas-map-3.jpg";
-import chlorakasOverview from "@/assets/chlorakas-overview.jpg";
-import chlorakasOverviewPlot from "@/assets/chlorakas-overview-plot.jpg";
-import newProjectOverview from "@/assets/new-project-overview.jpg";
-
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
-    images: [chlorakasMap, chlorakas1, chlorakas2, chlorakasMap3, chlorakasOverview, chlorakasOverviewPlot, newProjectOverview],
+    images: [],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
