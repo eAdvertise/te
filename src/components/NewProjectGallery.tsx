@@ -31,7 +31,7 @@ const NewProjectGallery = () => {
     images: ["/placeholder.svg"],
     title: "General Information",
     location: "",
-    description: "",
+    description: "Supermarkets/Convenience Stores: 20m • Bank: 50m • Cafes: 30m • Pharmacy: 100m",
     specs: "",
     type: "image" as const
   }];
