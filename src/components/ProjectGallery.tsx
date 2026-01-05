@@ -168,7 +168,7 @@ const ProjectGallery = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => <div key={index} className="group cursor-pointer rounded-xl overflow-hidden bg-background shadow-sm hover:shadow-xl transition-all duration-300" onClick={() => openLightbox(index)}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                
+                <img src={projectsWithArrows.includes(index) ? project.images[getCardImageIndex(index)] : project.images[0]} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 {projectsWithArrows.includes(index) && project.images.length > 1 && (
                   <>
                     <button
