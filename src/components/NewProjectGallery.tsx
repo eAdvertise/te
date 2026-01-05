@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import chlorakasMap from "@/assets/chlorakas-map.jpg";
 import chlorakas1 from "@/assets/chlorakas-1.jpg";
 import chlorakas2 from "@/assets/chlorakas-2.jpg";
+import newProjectOverview from "@/assets/new-project-overview.jpg";
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
-    images: [chlorakasMap, chlorakas1, chlorakas2],
+    images: [chlorakasMap, chlorakas1, chlorakas2, newProjectOverview],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
