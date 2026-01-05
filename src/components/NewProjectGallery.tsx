@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import chlorakasMap6 from "@/assets/chlorakas-map-6.jpg";
 
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
-    images: [chlorakasMap6],
+    images: [],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
