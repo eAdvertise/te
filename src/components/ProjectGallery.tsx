@@ -106,8 +106,8 @@ const ProjectGallery = () => {
     description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining two elements the brick work on the base and the gypsum board.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }, {
-    images: [chlorakas1, chlorakas2],
-    imageCaptions: ["Free test", "Free test"],
+    images: [chlorakas1],
+    imageCaptions: ["Free test"],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Modern townhouse development in the heart of Chlorakas.",
