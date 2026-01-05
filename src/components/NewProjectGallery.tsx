@@ -78,7 +78,13 @@ const NewProjectGallery = () => {
           {projects.map((project, index) => <div key={index} className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`} onClick={() => project.type === 'image' && openLightbox(index)}>
               <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                 {project.type === 'map' ? <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" /> : <>
-                    
+                    {project.images.length > 0 && (
+                      <img 
+                        src={index === 0 ? project.images[cardImageIndex] : project.images[0]} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                      />
+                    )}
                     {index === 0 && project.images.length > 1 && <>
                         <button onClick={e => navigateCardImage(e, "prev")} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
                           <ChevronLeft className="w-6 h-6" />
