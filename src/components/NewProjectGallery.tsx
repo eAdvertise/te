@@ -30,9 +30,9 @@ const NewProjectGallery = () => {
   }, {
     images: ["/placeholder.svg"],
     title: "General Information",
-    location: "Coral Bay, Cyprus",
-    description: "Coming soon - Beachfront property development with direct beach access and panoramic ocean views.",
-    specs: "5 Bedrooms • 4 Bathrooms • Pool • 420m²",
+    location: "",
+    description: "",
+    specs: "",
     type: "image" as const
   }];
   const openLightbox = (index: number) => {
