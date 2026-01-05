@@ -8,6 +8,13 @@ const NewProjectGallery = () => {
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
     images: [],
+    title: "Chlorakas Townhouse Residences",
+    location: "Chlorakas, Pafos, Cyprus",
+    description: "Central yet Quiet Location, easy access to anywhere",
+    specs: "2 & 3 Bedroomed Townhouses • 87-110 m² • Communal Pool",
+    type: "image" as const
+  }, {
+    images: [],
     title: "Project Location",
     location: "Chlorakas, Pafos, Cyprus",
     description: "View the exact location of our new development.",
