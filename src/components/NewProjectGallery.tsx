@@ -7,7 +7,7 @@ const NewProjectGallery = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
-    images: [],
+    images: ["/placeholder.svg"],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Coming soon - A brand new luxury villa development featuring modern architecture and premium finishes.",
