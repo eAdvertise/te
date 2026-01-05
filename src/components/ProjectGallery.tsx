@@ -65,6 +65,7 @@ import blanca5 from "@/assets/blanca-5.jpg";
 import blanca6 from "@/assets/blanca-6.jpg";
 import chlorakas1 from "@/assets/chlorakas-1.jpg";
 import chlorakas2 from "@/assets/chlorakas-2.jpg";
+
 const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -106,12 +107,12 @@ const ProjectGallery = () => {
     description: "Custom decorative gypsum board entrance feature with metal frame structure. A unique architectural element combining two elements the brick work on the base and the gypsum board.",
     specs: "475m² | 5 Bed | 4 Bath | Pool"
   }, {
-    images: [chlorakas1],
-    imageCaptions: ["Free test"],
+    images: [chlorakas1, chlorakas2],
+    imageDescriptions: ["Exterior view of the townhouse showcasing the modern Mediterranean architecture and landscaping", "Spacious interior living area with contemporary finishes and natural lighting"],
     title: "Chlorakas Townhouses",
     location: "Chlorakas, Pafos, Cyprus",
-    description: "Modern townhouse development in the heart of Chlorakas.",
-    specs: "Townhouses"
+    description: "Modern townhouse development featuring contemporary design with Mediterranean influences. Quality construction with attention to detail throughout.",
+    specs: "150m² | 3 Bed | 2 Bath"
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
@@ -256,10 +257,11 @@ const ProjectGallery = () => {
                     {selectedImageIndex + 1} / {projects[selectedProject].images.length}
                   </div>
                 </div>
+
                 {/* Image Caption */}
-                {projects[selectedProject].imageCaptions?.[selectedImageIndex] && (
-                  <p className="text-center text-primary-foreground/80 text-sm mt-2">
-                    {projects[selectedProject].imageCaptions[selectedImageIndex]}
+                {projects[selectedProject].imageDescriptions && projects[selectedProject].imageDescriptions[selectedImageIndex] && (
+                  <p className="text-center text-primary-foreground/80 text-sm mt-3 px-4">
+                    {projects[selectedProject].imageDescriptions[selectedImageIndex]}
                   </p>
                 )}
 
