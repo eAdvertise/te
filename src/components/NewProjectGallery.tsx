@@ -29,7 +29,7 @@ const NewProjectGallery = () => {
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
     images: ["/placeholder.svg"],
-    title: "Coastal Residence",
+    title: "General Information",
     location: "Coral Bay, Cyprus",
     description: "Coming soon - Beachfront property development with direct beach access and panoramic ocean views.",
     specs: "5 Bedrooms • 4 Bathrooms • Pool • 420m²",
