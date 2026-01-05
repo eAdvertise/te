@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
+import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
+import chlorakasNew3 from "@/assets/chlorakas-new-3.jpg";
+import chlorakasNew4 from "@/assets/chlorakas-new-4.jpg";
+import chlorakasNew5 from "@/assets/chlorakas-new-5.jpg";
+import chlorakasNew6 from "@/assets/chlorakas-new-6.jpg";
+import chlorakasNew7 from "@/assets/chlorakas-new-7.jpg";
 
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
   const projects = [{
-    images: [],
+    images: [chlorakasNew2, chlorakasNew7, chlorakasNew3, chlorakasNew1, chlorakasNew4, chlorakasNew5, chlorakasNew6],
     title: "Chlorakas Townhouse Residences",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Central yet Quiet Location, easy access to anywhere",
