@@ -18,7 +18,7 @@ const NewProjectGallery = () => {
     title: "Chlorakas Townhouse Residences",
     location: "Chlorakas, Pafos, Cyprus",
     description: "Central yet Quiet Location, easy access to anywhere",
-    specs: "2 & 3 Bedroomed Townhouses • 87-110 m² • Communal Pool",
+    specs: "2 & 3 Bedroomed Townhouses • 77.5-115 m² • Communal Pool",
     type: "image" as const
   }, {
     images: [],
