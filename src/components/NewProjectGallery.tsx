@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -116,6 +116,22 @@ const NewProjectGallery = () => {
                     <div className="flex items-center gap-2">
                       <Refrigerator className="w-4 h-4 text-primary" />
                       <span>White Goods Included</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Waves className="w-4 h-4 text-primary" />
+                      <span>Communal Pool</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Car className="w-4 h-4 text-primary" />
+                      <span>Covered Parking</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Sun className="w-4 h-4 text-primary" />
+                      <span>Photovoltaic System</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Fence className="w-4 h-4 text-primary" />
+                      <span>Private Garden</span>
                     </div>
                   </div>
                 </div>;
