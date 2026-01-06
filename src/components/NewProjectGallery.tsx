@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Waves, Car, Sun, Fence } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -19,6 +19,13 @@ const NewProjectGallery = () => {
     description: "Central yet Quiet Location, easy access to anywhere",
     specs: "2 & 3 Bedroomed Townhouses • 77.5-115 m² • Communal Pool",
     type: "image" as const
+  }, {
+    images: [],
+    title: "Facilities",
+    location: "",
+    description: "",
+    specs: "",
+    type: "facilities" as const
   }, {
     images: [],
     title: "Project Location",
@@ -75,6 +82,29 @@ const NewProjectGallery = () => {
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
+          if (project.type === 'facilities') {
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
+                  <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Waves className="w-4 h-4 text-primary" />
+                      <span>Communal Pool</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Car className="w-4 h-4 text-primary" />
+                      <span>Covered Parking</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Sun className="w-4 h-4 text-primary" />
+                      <span>Photovoltaic System</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Fence className="w-4 h-4 text-primary" />
+                      <span>Private Garden</span>
+                    </div>
+                  </div>
+                </div>;
+          }
           if (project.type === 'text') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
