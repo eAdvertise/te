@@ -6,8 +6,8 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Aristo Developers</title>
-        <meta name="description" content="Privacy Policy for Aristo Developers - Learn how we collect, use, and protect your personal information." />
+        <title>Privacy Policy | TE IRENE LTD</title>
+        <meta name="description" content="Privacy Policy for TE IRENE LTD - Learn how we collect, use, and protect your personal information." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Aristo Developers ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  TE IRENE LTD ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
               </section>
 
@@ -91,9 +91,9 @@ const PrivacyPolicy = () => {
                   If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at:
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  <strong className="text-foreground">Aristo Developers</strong><br />
-                  Email: info@aristodevelopers.com<br />
-                  Phone: +357 26 600 700
+                  <strong className="text-foreground">TE IRENE LTD</strong><br />
+                  Email: INFO@TE.PROPERTIES<br />
+                  Phone: +357 97529749
                 </p>
               </section>
             </div>
