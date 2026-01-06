@@ -46,7 +46,7 @@ const NewProjectGallery = () => {
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
     images: [album1, album2, album3],
-    title: "Project Album",
+    title: "3D Images",
     location: "Chlorakas, Pafos",
     description: "Browse through our project images",
     specs: "Interior & Exterior Views",
