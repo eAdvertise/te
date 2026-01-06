@@ -25,15 +25,6 @@ const Footer = () => {
     }, {
       name: "Featured Projects",
       href: "#projects"
-    }, {
-      name: "Costa Brava",
-      href: "#"
-    }, {
-      name: "Marbella",
-      href: "#"
-    }, {
-      name: "Mallorca",
-      href: "#"
     }]
   };
   const socialLinks = [{
