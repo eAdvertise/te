@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence, Thermometer, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -132,6 +132,14 @@ const NewProjectGallery = () => {
                     <div className="flex items-center gap-2">
                       <Fence className="w-4 h-4 text-primary" />
                       <span>Private Garden</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Thermometer className="w-4 h-4 text-primary" />
+                      <span>Heating</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Snowflake className="w-4 h-4 text-primary" />
+                      <span>Cooling</span>
                     </div>
                   </div>
                 </div>;
