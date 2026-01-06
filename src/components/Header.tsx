@@ -17,7 +17,7 @@ const Header = () => {
     name: "New Projects",
     href: "#new-projects"
   }, {
-    name: "Projects",
+    name: "Completed Projects",
     href: "#projects"
   }, {
     name: "Contact",
