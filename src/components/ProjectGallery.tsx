@@ -274,7 +274,9 @@ const ProjectGallery = () => {
                   {projects[selectedProject].specs}
                 </div>
                 <div className="mt-8">
-                  <Button variant="default">Request Details</Button>
+                  <Button variant="default" asChild>
+                    <a href="#contact">Request Details</a>
+                  </Button>
                 </div>
               </div>
             </div>
