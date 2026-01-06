@@ -29,7 +29,7 @@ const NewProjectGallery = () => {
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
     images: [],
-    title: "General Information",
+    title: "Location Highlights",
     location: "",
     description: "",
     specs: "",
