@@ -93,7 +93,7 @@ const NewProjectGallery = () => {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
                   <div className="text-muted-foreground text-sm leading-relaxed">
-                    <p>Enter your text here...</p>
+                    <p>New Development </p>
                   </div>
                 </div>;
           }
@@ -175,12 +175,7 @@ const NewProjectGallery = () => {
                 <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
                   {project.type === 'map' ? <>
                       <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" />
-                      <a 
-                        href="https://www.google.com/maps?q=34.793499,32.416253" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="absolute bottom-4 right-4 z-10 bg-background/90 text-foreground text-xs px-3 py-1.5 rounded-md hover:bg-background transition-colors shadow-md"
-                      >
+                      <a href="https://www.google.com/maps?q=34.793499,32.416253" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 right-4 z-10 bg-background/90 text-foreground text-xs px-3 py-1.5 rounded-md hover:bg-background transition-colors shadow-md">
                         View Larger Map
                       </a>
                     </> : <>
