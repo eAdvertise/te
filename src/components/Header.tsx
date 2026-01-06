@@ -39,7 +39,9 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span>+357 97529749 </span>
             </a>
-            <Button variant="default">Get a Quote</Button>
+            <Button variant="default" asChild>
+              <a href="#contact">Get a Quote</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -54,8 +56,8 @@ const Header = () => {
               {navLinks.map(link => <a key={link.name} href={link.href} className="text-foreground/80 hover:text-primary transition-colors font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                   {link.name}
                 </a>)}
-              <Button variant="default" className="w-full mt-2">
-                Get a Quote
+              <Button variant="default" className="w-full mt-2" asChild>
+                <a href="#contact">Get a Quote</a>
               </Button>
             </div>
           </nav>}
