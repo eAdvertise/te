@@ -20,7 +20,7 @@ const Header = () => {
     name: "Contact",
     href: "#contact"
   }];
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-card backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-28">
           <a href="#home" className="flex items-center gap-2">
