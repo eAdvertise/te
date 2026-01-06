@@ -185,6 +185,9 @@ const NewProjectGallery = () => {
                         </div>
                       </>}
                   </div>
+                  <Button variant="default" className="mt-3" asChild>
+                    <a href="#contact">Request Details</a>
+                  </Button>
                 </div>;
           }
           if (project.type === 'text') {
