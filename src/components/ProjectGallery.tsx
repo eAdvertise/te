@@ -200,10 +200,13 @@ const ProjectGallery = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-1">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm flex items-center gap-2">
+                <p className="text-muted-foreground text-sm flex items-center gap-2 mb-3">
                   <MapPin className="w-4 h-4" />
                   {project.location}
                 </p>
+                <Button variant="default" size="sm" className="w-full" asChild onClick={(e) => e.stopPropagation()}>
+                  <a href="#contact">Get Quote</a>
+                </Button>
               </div>
             </div>)}
         </div>

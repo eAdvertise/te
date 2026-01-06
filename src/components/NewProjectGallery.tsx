@@ -256,7 +256,7 @@ const NewProjectGallery = () => {
                         </>}
                     </>}
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className={`font-semibold text-primary-foreground mb-1 ${index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>
                       {project.title}
                     </h3>
@@ -264,7 +264,12 @@ const NewProjectGallery = () => {
                       <MapPin className="w-4 h-4" />
                       {project.location}
                     </div>
-                    <p className="text-primary-foreground/80 text-sm">{project.specs}</p>
+                    <p className="text-primary-foreground/80 text-sm mb-3">{project.specs}</p>
+                    {project.type === 'image' && (
+                      <Button variant="default" size="sm" asChild onClick={(e) => e.stopPropagation()}>
+                        <a href="#contact">Get Quote</a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>;
