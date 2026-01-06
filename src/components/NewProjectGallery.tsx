@@ -42,7 +42,7 @@ const NewProjectGallery = () => {
     type: "map" as const,
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
-    images: [],
+    images: [chlorakasNew3, chlorakasNew4, chlorakasNew5, chlorakasNew6],
     title: "Project Album",
     location: "Chlorakas, Pafos",
     description: "Browse through our project images",
