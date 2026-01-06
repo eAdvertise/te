@@ -11,7 +11,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 94%;
+    --background: 210 15% 88%;
     --foreground: 210 50% 15%;
 
     --card: 0 0% 100%;
