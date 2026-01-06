@@ -20,6 +20,9 @@ const Footer = () => {
       href: "#services"
     }],
     projects: [{
+      name: "New Projects",
+      href: "#new-project"
+    }, {
       name: "Featured Projects",
       href: "#projects"
     }, {
