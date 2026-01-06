@@ -45,9 +45,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-serif font-bold mb-4">
-              Mediterranean Estates
-            </h3>
+            <h3 className="text-2xl font-serif font-bold mb-4">tE</h3>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
               Quality property construction and development on the Mediterranean coast. 
      
