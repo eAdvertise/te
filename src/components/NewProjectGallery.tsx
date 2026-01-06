@@ -49,7 +49,7 @@ const NewProjectGallery = () => {
     title: "3D Images",
     location: "Chlorakas, Pafos",
     description: "Browse through our project images",
-    specs: "Interior & Exterior Views",
+    specs: "",
     type: "album" as const
   }, {
     images: [],
