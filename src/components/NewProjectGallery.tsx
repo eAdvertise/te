@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence, Thermometer, Snowflake, ShoppingCart, Building2, UtensilsCrossed, Coffee } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence, Thermometer, Snowflake, ShoppingCart, Building2, UtensilsCrossed, Coffee, Plane, Hospital, Bus, Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -220,6 +220,26 @@ const NewProjectGallery = () => {
                     <div className="flex items-center gap-2">
                       <Coffee className="w-4 h-4 text-primary" />
                       <span>60m to the nearest Coffee House</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Plane className="w-4 h-4 text-primary" />
+                      <span>10.36km to Pafos Airport</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-primary" />
+                      <span>2km to Pafos City Center</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Hospital className="w-4 h-4 text-primary" />
+                      <span>2.6km to Pafos General Hospital</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Bus className="w-4 h-4 text-primary" />
+                      <span>50m to Bus Stop</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Dumbbell className="w-4 h-4 text-primary" />
+                      <span>300m to Gym/Fitness Center</span>
                     </div>
                   </div>
                 </div>;
