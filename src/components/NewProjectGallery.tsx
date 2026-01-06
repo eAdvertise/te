@@ -28,12 +28,12 @@ const NewProjectGallery = () => {
     type: "map" as const,
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
-    images: ["/placeholder.svg"],
+    images: [],
     title: "General Information",
     location: "",
     description: "",
     specs: "",
-    type: "image" as const
+    type: "text" as const
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
@@ -74,35 +74,50 @@ const NewProjectGallery = () => {
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => <div key={index} className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`} onClick={() => project.type === 'image' && openLightbox(index)}>
-              <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
-                {project.type === 'map' ? <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" /> : <>
-                    {project.images.length > 0 && <img src={index === 0 ? project.images[cardImageIndex] : project.images[0]} alt={project.title} className="w-full h-full transition-transform duration-500 group-hover:scale-105 object-contain" />}
-                    {index === 0 && project.images.length > 1 && <>
-                        <button onClick={e => navigateCardImage(e, "prev")} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronLeft className="w-6 h-6" />
-                        </button>
-                        <button onClick={e => navigateCardImage(e, "next")} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronRight className="w-6 h-6" />
-                        </button>
-                        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === cardImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
-                        </div>
-                      </>}
-                  </>}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
-                  <h3 className={`font-semibold text-primary-foreground mb-1 ${index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-2 text-primary-foreground/90 text-sm mb-2">
-                    <MapPin className="w-4 h-4" />
-                    {project.location}
+          {projects.map((project, index) => {
+            if (project.type === 'text') {
+              return (
+                <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
+                  <div className="text-muted-foreground text-sm leading-relaxed">
+                    <p>Contact us for more information about our new development projects, pricing, and availability.</p>
                   </div>
-                  <p className="text-primary-foreground/80 text-sm">{project.specs}</p>
+                </div>
+              );
+            }
+            
+            return (
+              <div key={index} className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`} onClick={() => project.type === 'image' && openLightbox(index)}>
+                <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                  {project.type === 'map' ? <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" /> : <>
+                      {project.images.length > 0 && <img src={index === 0 ? project.images[cardImageIndex] : project.images[0]} alt={project.title} className="w-full h-full transition-transform duration-500 group-hover:scale-105 object-contain" />}
+                      {index === 0 && project.images.length > 1 && <>
+                          <button onClick={e => navigateCardImage(e, "prev")} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                            <ChevronLeft className="w-6 h-6" />
+                          </button>
+                          <button onClick={e => navigateCardImage(e, "next")} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                            <ChevronRight className="w-6 h-6" />
+                          </button>
+                          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                            {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === cardImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
+                          </div>
+                        </>}
+                    </>}
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
+                    <h3 className={`font-semibold text-primary-foreground mb-1 ${index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>
+                      {project.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-primary-foreground/90 text-sm mb-2">
+                      <MapPin className="w-4 h-4" />
+                      {project.location}
+                    </div>
+                    <p className="text-primary-foreground/80 text-sm">{project.specs}</p>
+                  </div>
                 </div>
               </div>
-            </div>)}
+            );
+          })}
         </div>
 
         {/* Lightbox */}
