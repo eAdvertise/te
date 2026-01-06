@@ -21,9 +21,11 @@ const Hero = () => {
           <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed md:text-sm">A quality property construction and development company specializing in renovation of or brand new homes. Our co-operative team of architects, engineers, and craftsmen bring together traditional Mediterranean aesthetics with modern innovation.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button size="lg" className="group">
-              View Our Projects
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="group" asChild>
+              <a href="#projects">
+                View Our Projects
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20" asChild>
               <a href="#contact">Contact Us</a>
