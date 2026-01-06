@@ -8,6 +8,9 @@ import chlorakasNew4 from "@/assets/chlorakas-new-4.jpg";
 import chlorakasNew5 from "@/assets/chlorakas-new-5.jpg";
 import chlorakasNew6 from "@/assets/chlorakas-new-6.jpg";
 import chlorakasNew7 from "@/assets/chlorakas-new-7.jpg";
+import album1 from "@/assets/album-1.jpg";
+import album2 from "@/assets/album-2.jpg";
+import album3 from "@/assets/album-3.jpg";
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -42,7 +45,7 @@ const NewProjectGallery = () => {
     type: "map" as const,
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
   }, {
-    images: [chlorakasNew3, chlorakasNew4, chlorakasNew5, chlorakasNew6],
+    images: [album1, album2, album3],
     title: "Project Album",
     location: "Chlorakas, Pafos",
     description: "Browse through our project images",
