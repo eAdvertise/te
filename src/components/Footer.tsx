@@ -21,7 +21,7 @@ const Footer = () => {
     }],
     projects: [{
       name: "New Projects",
-      href: "#new-project"
+      href: "#new-projects"
     }, {
       name: "Featured Projects",
       href: "#projects"
