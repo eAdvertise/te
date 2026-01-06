@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin, Waves, Car, Sun, Fence } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -102,20 +102,20 @@ const NewProjectGallery = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
                   <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
                     <div className="flex items-center gap-2">
-                      <Waves className="w-4 h-4 text-primary" />
-                      <span>Communal Pool</span>
+                      <Flame className="w-4 h-4 text-primary" />
+                      <span>Fire Alarm</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Car className="w-4 h-4 text-primary" />
-                      <span>Covered Parking</span>
+                      <ShieldAlert className="w-4 h-4 text-primary" />
+                      <span>Security Alarm</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Sun className="w-4 h-4 text-primary" />
-                      <span>Photovoltaic System</span>
+                      <CreditCard className="w-4 h-4 text-primary" />
+                      <span>Magnetic Card Entrance</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Fence className="w-4 h-4 text-primary" />
-                      <span>Private Garden</span>
+                      <Refrigerator className="w-4 h-4 text-primary" />
+                      <span>White Goods Included</span>
                     </div>
                   </div>
                 </div>;
