@@ -86,7 +86,7 @@ const NewProjectGallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
-            Coming Soon
+            ​
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-2 mb-4">
             NEW PROJECT
@@ -160,40 +160,30 @@ const NewProjectGallery = () => {
                   <h3 className="text-lg font-semibold text-foreground mb-3">{project.title}</h3>
                   <div className="relative flex-1">
                     <div className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
-                      setSelectedProject(index);
-                      setSelectedImageIndex(albumImageIndex);
-                      document.body.style.overflow = "hidden";
-                    }}>
+                  setSelectedProject(index);
+                  setSelectedImageIndex(albumImageIndex);
+                  document.body.style.overflow = "hidden";
+                }}>
                       <img src={project.images[albumImageIndex]} alt={`Album ${albumImageIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                       <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
                     </div>
-                    {project.images.length > 1 && (
-                      <>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setAlbumImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
-                          }} 
-                          className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
-                        >
+                    {project.images.length > 1 && <>
+                        <button onClick={e => {
+                    e.stopPropagation();
+                    setAlbumImageIndex(prev => (prev - 1 + project.images.length) % project.images.length);
+                  }} className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
                           <ChevronLeft className="w-5 h-5" />
                         </button>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setAlbumImageIndex((prev) => (prev + 1) % project.images.length);
-                          }} 
-                          className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
-                        >
+                        <button onClick={e => {
+                    e.stopPropagation();
+                    setAlbumImageIndex(prev => (prev + 1) % project.images.length);
+                  }} className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
                           <ChevronRight className="w-5 h-5" />
                         </button>
                         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                          {project.images.map((_, imgIndex) => (
-                            <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />
-                          ))}
+                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
                         </div>
-                      </>
-                    )}
+                      </>}
                   </div>
                 </div>;
           }
