@@ -6,22 +6,22 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
     name: "Home",
-    href: "#home"
+    href: "/#home"
   }, {
     name: "About",
-    href: "#about"
+    href: "/#about"
   }, {
     name: "Services",
-    href: "#services"
+    href: "/#services"
   }, {
     name: "New Projects",
-    href: "#new-projects"
+    href: "/#new-projects"
   }, {
     name: "Completed Projects",
-    href: "#projects"
+    href: "/#projects"
   }, {
     name: "Contact",
-    href: "#contact"
+    href: "/#contact"
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-card backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
