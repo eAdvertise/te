@@ -25,8 +25,8 @@ const Hero = () => {
               View Our Projects
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20">
-              Contact Us
+            <Button variant="outline" size="lg" className="bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20" asChild>
+              <a href="#contact">Contact Us</a>
             </Button>
           </div>
 
