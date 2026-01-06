@@ -21,6 +21,13 @@ const NewProjectGallery = () => {
     type: "image" as const
   }, {
     images: [],
+    title: "Project Details",
+    location: "",
+    description: "",
+    specs: "",
+    type: "info" as const
+  }, {
+    images: [],
     title: "Facilities",
     location: "",
     description: "",
@@ -82,6 +89,14 @@ const NewProjectGallery = () => {
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
+          if (project.type === 'info') {
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
+                  <div className="text-muted-foreground text-sm leading-relaxed">
+                    <p>Enter your text here...</p>
+                  </div>
+                </div>;
+          }
           if (project.type === 'facilities') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
