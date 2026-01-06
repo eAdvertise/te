@@ -185,11 +185,8 @@ const NewProjectGallery = () => {
                         </div>
                       </>}
                   </div>
-                  <Button variant="default" className="mt-3" asChild>
-                    <a href="#contact">Request Details</a>
-                  </Button>
                 </div>;
-          }
+            }
           if (project.type === 'text') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-start">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
@@ -322,11 +319,6 @@ const NewProjectGallery = () => {
                 </p>
                 <div className="inline-block px-4 py-2 bg-primary/20 rounded-lg text-sm">
                   {projects[selectedProject].specs}
-                </div>
-                <div className="mt-8">
-                  <Button variant="default" asChild>
-                    <a href="#contact">Request Details</a>
-                  </Button>
                 </div>
               </div>
             </div>

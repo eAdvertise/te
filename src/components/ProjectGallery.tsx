@@ -273,11 +273,6 @@ const ProjectGallery = () => {
                 <div className="inline-block px-4 py-2 bg-primary/20 rounded-lg text-sm">
                   {projects[selectedProject].specs}
                 </div>
-                <div className="mt-8">
-                  <Button variant="default" asChild>
-                    <a href="#contact">Request Details</a>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>}
