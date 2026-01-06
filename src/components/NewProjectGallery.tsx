@@ -157,7 +157,7 @@ const NewProjectGallery = () => {
           if (project.type === 'album') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-4 flex flex-col">
                   <h3 className="text-lg font-semibold text-foreground mb-3">{project.title}</h3>
-                  <div className="grid grid-cols-2 gap-2 flex-1">
+                  <div className="grid grid-cols-3 gap-2 flex-1">
                     {project.images.map((image, imgIndex) => (
                       <div key={imgIndex} className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
                         setSelectedProject(index);
