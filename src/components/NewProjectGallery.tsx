@@ -15,6 +15,7 @@ const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState(0);
+  const [albumImageIndex, setAlbumImageIndex] = useState(0);
   const projects = [{
     images: [chlorakasNew2, chlorakasNew7, chlorakasNew3, chlorakasNew1, chlorakasNew4, chlorakasNew5, chlorakasNew6],
     title: "Chlorakas Townhouse Residences",
@@ -157,19 +158,42 @@ const NewProjectGallery = () => {
           if (project.type === 'album') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-4 flex flex-col">
                   <h3 className="text-lg font-semibold text-foreground mb-3">{project.title}</h3>
-                  <div className="flex-1 overflow-x-auto scrollbar-thin">
-                    <div className="flex gap-2 h-full">
-                      {project.images.map((image, imgIndex) => (
-                        <div key={imgIndex} className="relative flex-shrink-0 w-full aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
-                          setSelectedProject(index);
-                          setSelectedImageIndex(imgIndex);
-                          document.body.style.overflow = "hidden";
-                        }}>
-                          <img src={image} alt={`Album ${imgIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                          <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
-                        </div>
-                      ))}
+                  <div className="relative flex-1">
+                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
+                      setSelectedProject(index);
+                      setSelectedImageIndex(albumImageIndex);
+                      document.body.style.overflow = "hidden";
+                    }}>
+                      <img src={project.images[albumImageIndex]} alt={`Album ${albumImageIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
                     </div>
+                    {project.images.length > 1 && (
+                      <>
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setAlbumImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
+                          }} 
+                          className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                        >
+                          <ChevronLeft className="w-5 h-5" />
+                        </button>
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setAlbumImageIndex((prev) => (prev + 1) % project.images.length);
+                          }} 
+                          className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10"
+                        >
+                          <ChevronRight className="w-5 h-5" />
+                        </button>
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                          {project.images.map((_, imgIndex) => (
+                            <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>;
           }
