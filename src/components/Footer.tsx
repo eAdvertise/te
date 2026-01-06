@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
@@ -101,9 +100,9 @@ const Footer = () => {
             © {currentYear} tE. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+            <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
               Privacy Policy
-            </Link>
+            </a>
             <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
               Terms of Service
             </a>
