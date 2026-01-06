@@ -123,7 +123,7 @@ const NewProjectGallery = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Car className="w-4 h-4 text-primary" />
-                      <span>Covered Parking</span>
+                      <span>Parking</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Sun className="w-4 h-4 text-primary" />
