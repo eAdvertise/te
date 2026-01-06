@@ -160,7 +160,17 @@ const NewProjectGallery = () => {
           }
           return <div key={index} className={`group cursor-pointer rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-xl transition-all duration-300 ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`} onClick={() => project.type === 'image' && openLightbox(index)}>
                 <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9] lg:aspect-[4/3]' : 'aspect-[4/3]'}`}>
-                  {project.type === 'map' ? <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" /> : <>
+                  {project.type === 'map' ? <>
+                      <iframe src={project.mapUrl} className="w-full h-full border-0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Project Location Map" />
+                      <a 
+                        href="https://www.google.com/maps?q=34.793499,32.416253" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute bottom-4 right-4 z-10 bg-background/90 text-foreground text-xs px-3 py-1.5 rounded-md hover:bg-background transition-colors shadow-md"
+                      >
+                        View Larger Map
+                      </a>
+                    </> : <>
                       {project.images.length > 0 && <img src={index === 0 ? project.images[cardImageIndex] : project.images[0]} alt={project.title} className="w-full h-full transition-transform duration-500 group-hover:scale-105 object-contain" />}
                       {index === 0 && project.images.length > 1 && <>
                           <button onClick={e => navigateCardImage(e, "prev")} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
