@@ -157,17 +157,19 @@ const NewProjectGallery = () => {
           if (project.type === 'album') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-4 flex flex-col">
                   <h3 className="text-lg font-semibold text-foreground mb-3">{project.title}</h3>
-                  <div className="grid grid-cols-3 gap-2 flex-1">
-                    {project.images.map((image, imgIndex) => (
-                      <div key={imgIndex} className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
-                        setSelectedProject(index);
-                        setSelectedImageIndex(imgIndex);
-                        document.body.style.overflow = "hidden";
-                      }}>
-                        <img src={image} alt={`Album ${imgIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
-                      </div>
-                    ))}
+                  <div className="flex-1 overflow-x-auto scrollbar-thin">
+                    <div className="flex gap-2 h-full">
+                      {project.images.map((image, imgIndex) => (
+                        <div key={imgIndex} className="relative flex-shrink-0 w-full aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
+                          setSelectedProject(index);
+                          setSelectedImageIndex(imgIndex);
+                          document.body.style.overflow = "hidden";
+                        }}>
+                          <img src={image} alt={`Album ${imgIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                          <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>;
           }
