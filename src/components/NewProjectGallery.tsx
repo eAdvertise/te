@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence, Thermometer, Snowflake } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Flame, ShieldAlert, CreditCard, Refrigerator, Waves, Car, Sun, Fence, Thermometer, Snowflake, ShoppingCart, Building2, UtensilsCrossed, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import chlorakasNew1 from "@/assets/chlorakas-new-1.jpg";
 import chlorakasNew2 from "@/assets/chlorakas-new-2.jpg";
@@ -147,14 +147,27 @@ const NewProjectGallery = () => {
           if (project.type === 'text') {
             return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
-                  <div className="text-muted-foreground text-sm leading-relaxed">
-                    <p>
-                      200m from Convenience/Supermarket Stores<br />
-                      1.7km from the Sea<br />
-                      120m from the nearest Bank<br />
-                      200m from the nearest Restaurant<br />
-                      60m to the nearest Coffee House
-                    </p>
+                  <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
+                    <div className="flex items-center gap-2">
+                      <ShoppingCart className="w-4 h-4 text-primary" />
+                      <span>200m from Convenience/Supermarket Stores</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Waves className="w-4 h-4 text-primary" />
+                      <span>1.7km from the Sea</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Building2 className="w-4 h-4 text-primary" />
+                      <span>120m from the nearest Bank</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <UtensilsCrossed className="w-4 h-4 text-primary" />
+                      <span>200m from the nearest Restaurant</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Coffee className="w-4 h-4 text-primary" />
+                      <span>60m to the nearest Coffee House</span>
+                    </div>
                   </div>
                 </div>;
           }
