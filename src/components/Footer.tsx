@@ -5,9 +5,6 @@ const Footer = () => {
     company: [{
       name: "About Us",
       href: "#about"
-    }, {
-      name: "Press",
-      href: "#"
     }],
     services: [{
       name: "Villa Construction",
