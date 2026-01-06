@@ -76,7 +76,7 @@ const NewProjectGallery = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
           if (project.type === 'text') {
-            return <div key={index} className="md:col-span-2 lg:col-span-2 rounded-xl overflow-hidden bg-card shadow-sm p-8 flex flex-col justify-center min-h-[200px]">
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
                   <div className="text-muted-foreground text-sm leading-relaxed">
                     <p>​200m from Convenience/Supermarket Stores
