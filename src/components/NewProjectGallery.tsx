@@ -21,19 +21,19 @@ const NewProjectGallery = () => {
     type: "image" as const
   }, {
     images: [],
+    title: "Location Highlights",
+    location: "",
+    description: "",
+    specs: "",
+    type: "text" as const
+  }, {
+    images: [],
     title: "Project Location",
     location: "Chlorakas, Pafos, Cyprus",
     description: "View the exact location of our new development.",
     specs: "Prime Location • Near the Sea",
     type: "map" as const,
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
-  }, {
-    images: [],
-    title: "Location Highlights",
-    location: "",
-    description: "",
-    specs: "",
-    type: "text" as const
   }];
   const openLightbox = (index: number) => {
     setSelectedProject(index);
