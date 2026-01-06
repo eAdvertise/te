@@ -198,7 +198,7 @@ const NewProjectGallery = () => {
                 </div>;
           }
           if (project.type === 'text') {
-            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-center">
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col justify-start">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{project.title}</h3>
                   <div className="text-muted-foreground text-sm leading-relaxed space-y-2">
                     <div className="flex items-center gap-2">
