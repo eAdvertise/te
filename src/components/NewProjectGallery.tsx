@@ -31,19 +31,19 @@ const NewProjectGallery = () => {
     specs: "",
     type: "info" as const
   }, {
-    images: [album1, album2, album3],
-    title: "3D Images",
-    location: "Chlorakas, Pafos",
-    description: "Browse through our project images",
-    specs: "",
-    type: "album" as const
-  }, {
     images: [],
     title: "Facilities",
     location: "",
     description: "",
     specs: "",
     type: "facilities" as const
+  }, {
+    images: [album1, album2, album3],
+    title: "3D Images",
+    location: "Chlorakas, Pafos",
+    description: "Browse through our project images",
+    specs: "",
+    type: "album" as const
   }, {
     images: [],
     title: "Project Location",
