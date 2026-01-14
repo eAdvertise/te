@@ -156,10 +156,10 @@ const NewProjectGallery = () => {
                 </div>;
           }
           if (project.type === 'album') {
-            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-4 flex flex-col">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{project.title}</h3>
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col lg:col-span-3">
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">{project.title}</h3>
                   <div className="relative flex-1">
-                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
+                    <div className="relative aspect-[21/9] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
                   setSelectedProject(index);
                   setSelectedImageIndex(albumImageIndex);
                   document.body.style.overflow = "hidden";
@@ -171,17 +171,17 @@ const NewProjectGallery = () => {
                         <button onClick={e => {
                     e.stopPropagation();
                     setAlbumImageIndex(prev => (prev - 1 + project.images.length) % project.images.length);
-                  }} className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronLeft className="w-5 h-5" />
+                  }} className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                          <ChevronLeft className="w-8 h-8" />
                         </button>
                         <button onClick={e => {
                     e.stopPropagation();
                     setAlbumImageIndex(prev => (prev + 1) % project.images.length);
-                  }} className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronRight className="w-5 h-5" />
+                  }} className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                          <ChevronRight className="w-8 h-8" />
                         </button>
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-3 h-3 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
                         </div>
                       </>}
                   </div>
