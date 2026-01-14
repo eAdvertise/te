@@ -156,34 +156,40 @@ const NewProjectGallery = () => {
                 </div>;
           }
           if (project.type === 'album') {
-            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm p-6 flex flex-col lg:col-span-3">
-                  <h3 className="text-2xl font-semibold text-foreground mb-4">{project.title}</h3>
-                  <div className="relative flex-1">
-                    <div className="relative aspect-[21/9] rounded-lg overflow-hidden cursor-pointer group" onClick={() => {
+            return <div key={index} className="rounded-xl overflow-hidden bg-card shadow-sm md:col-span-2 lg:col-span-2 lg:row-span-2 cursor-pointer group" onClick={() => {
                   setSelectedProject(index);
                   setSelectedImageIndex(albumImageIndex);
                   document.body.style.overflow = "hidden";
                 }}>
-                      <img src={project.images[albumImageIndex]} alt={`Album ${albumImageIndex + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
-                    </div>
+                  <div className="relative overflow-hidden aspect-[16/9] lg:aspect-[4/3]">
+                    <img src={project.images[albumImageIndex]} alt={`Album ${albumImageIndex + 1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
                     {project.images.length > 1 && <>
                         <button onClick={e => {
                     e.stopPropagation();
                     setAlbumImageIndex(prev => (prev - 1 + project.images.length) % project.images.length);
-                  }} className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronLeft className="w-8 h-8" />
+                  }} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                          <ChevronLeft className="w-6 h-6" />
                         </button>
                         <button onClick={e => {
                     e.stopPropagation();
                     setAlbumImageIndex(prev => (prev + 1) % project.images.length);
-                  }} className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
-                          <ChevronRight className="w-8 h-8" />
+                  }} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-background/80 rounded-full text-foreground hover:bg-background shadow-lg transition-all hover:scale-110 z-10">
+                          <ChevronRight className="w-6 h-6" />
                         </button>
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-3 h-3 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
+                        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                          {project.images.map((_, imgIndex) => <div key={imgIndex} className={`w-2 h-2 rounded-full transition-all ${imgIndex === albumImageIndex ? 'bg-primary-foreground' : 'bg-primary-foreground/40'}`} />)}
                         </div>
                       </>}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
+                      <h3 className="text-2xl lg:text-3xl font-semibold text-primary-foreground mb-1">{project.title}</h3>
+                      <div className="flex items-center gap-2 text-primary-foreground/90 text-sm mb-2">
+                        <MapPin className="w-4 h-4" />
+                        {project.location}
+                      </div>
+                      <p className="text-primary-foreground/80 text-sm">{project.description}</p>
+                    </div>
                   </div>
                 </div>;
             }
