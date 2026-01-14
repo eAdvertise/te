@@ -24,6 +24,13 @@ const NewProjectGallery = () => {
     specs: "2 & 3 Bedroomed Townhouses • 77.5-115 m² • Communal Pool",
     type: "image" as const
   }, {
+    images: [album1, album2, album3],
+    title: "3D Images",
+    location: "Chlorakas, Pafos",
+    description: "Browse through our project images",
+    specs: "",
+    type: "album" as const
+  }, {
     images: [],
     title: "Project Details",
     location: "",
@@ -45,13 +52,6 @@ const NewProjectGallery = () => {
     specs: "Prime Location • Near the Sea",
     type: "map" as const,
     mapUrl: "https://maps.google.com/maps?q=34.793499,32.416253&z=18&output=embed"
-  }, {
-    images: [album1, album2, album3],
-    title: "3D Images",
-    location: "Chlorakas, Pafos",
-    description: "Browse through our project images",
-    specs: "",
-    type: "album" as const
   }, {
     images: [],
     title: "Location Highlights",
