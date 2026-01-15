@@ -8,9 +8,14 @@ import chlorakasNew4 from "@/assets/chlorakas-new-4.jpg";
 import chlorakasNew5 from "@/assets/chlorakas-new-5.jpg";
 import chlorakasNew6 from "@/assets/chlorakas-new-6.jpg";
 import chlorakasNew7 from "@/assets/chlorakas-new-7.jpg";
-import album1 from "@/assets/album-1.jpg";
-import album2 from "@/assets/album-2.jpg";
-import album3 from "@/assets/album-3.jpg";
+import exterior3d1 from "@/assets/3d-exterior-1.jpg";
+import exterior3d2 from "@/assets/3d-exterior-2.jpg";
+import exterior3d3 from "@/assets/3d-exterior-3.jpg";
+import exterior3d4 from "@/assets/3d-exterior-4.jpg";
+import interior3d1 from "@/assets/3d-interior-1.jpg";
+import interior3d2 from "@/assets/3d-interior-2.jpg";
+import interior3d3 from "@/assets/3d-interior-3.jpg";
+import interior3d4 from "@/assets/3d-interior-4.jpg";
 const NewProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -38,7 +43,7 @@ const NewProjectGallery = () => {
     specs: "",
     type: "facilities" as const
   }, {
-    images: [album1, album2, album3],
+    images: [exterior3d1, exterior3d2, exterior3d3, exterior3d4, interior3d1, interior3d2, interior3d3, interior3d4],
     title: "3D Images",
     location: "Chlorakas, Pafos",
     description: "Browse through our project images",
