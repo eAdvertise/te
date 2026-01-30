@@ -7,9 +7,16 @@ import { useToast } from "@/hooks/use-toast";
 
 const PHP_ENDPOINT = "https://te.properties/send-email.php";
 
+type FormErrors = {
+  name?: string;
+  email?: string;
+  message?: string;
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,8 +24,38 @@ const Contact = () => {
     message: "",
   });
 
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -38,6 +75,7 @@ const Contact = () => {
           description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
         });
         setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({});
       } else {
         throw new Error(result.message || "Failed to send message");
       }
@@ -49,6 +87,12 @@ const Contact = () => {
       });
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const clearError = (field: keyof FormErrors) => {
+    if (errors[field]) {
+      setErrors({ ...errors, [field]: undefined });
     }
   };
 
@@ -96,24 +140,32 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Your Name</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Your Name *</label>
                   <Input
                     type="text"
                     placeholder="John Smith"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
+                    onChange={(e) => {
+                      setFormData({ ...formData, name: e.target.value });
+                      clearError("name");
+                    }}
+                    className={errors.name ? "border-destructive" : ""}
                   />
+                  {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Email Address</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
                   <Input
                     type="email"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
+                    onChange={(e) => {
+                      setFormData({ ...formData, email: e.target.value });
+                      clearError("email");
+                    }}
+                    className={errors.email ? "border-destructive" : ""}
                   />
+                  {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
                 </div>
               </div>
               <div>
@@ -126,14 +178,18 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Your Message</label>
+                <label className="block text-sm font-medium text-foreground mb-2">Your Message *</label>
                 <Textarea
                   placeholder="Tell us about your project..."
                   rows={5}
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
+                  onChange={(e) => {
+                    setFormData({ ...formData, message: e.target.value });
+                    clearError("message");
+                  }}
+                  className={errors.message ? "border-destructive" : ""}
                 />
+                {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
               </div>
               <Button type="submit" size="lg" className="w-full group" disabled={isSubmitting}>
                 {isSubmitting ? (
