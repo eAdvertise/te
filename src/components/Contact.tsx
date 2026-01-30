@@ -8,19 +8,26 @@ import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: "TE Properties",
-    email: "info@te.properties",
-    phone: "+357 97529749",
+    name: "",
+    email: "",
+    phone: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:info@te.properties?subject=${subject}&body=${body}`;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      title: "Opening Email Client",
+      description: "Your default email app will open with your message.",
     });
-    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   const contactInfo = [
